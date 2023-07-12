@@ -1,64 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="icon" href="assets/favIcon/Logo.svg" type="image/x-icon" />
-
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="path/to/your/custom/bootstrap.css">
+
     <title>Twitter|Home</title>
-</head>
-
-<body>
-    <div class="container-fluid bg-dark home">
-        <nav class="d-flex d-sm-none justify-content-between align-items-center pt-3">
-            <span class="img-bg"><img src="assets/mob-ass/user-img.png" alt="" class="user-img" /></span>
-            <span><img src="assets/mob-ass/Logo.svg" class="bird" alt="" /></span>
-            <span></span>
+  </head>
+  <body>
+    <div class="container-fluid home">
+      <section class="d-flex flex-column gap-3 top-section" id="mySection">
+        <nav
+          class="d-flex d-sm-none justify-content-between align-items-center pt-3"
+          style="transition: 0.5s">
+          <span class="img-bg cursor-pointer">
+            <img
+              src="assets/mob-ass/user-img.png"
+              alt=""
+              class="user-img cursor-pointer" />
+          </span>
+          <span>
+            <img src="assets/mob-ass/Logo.svg" class="bird" alt="" />
+          </span>
+          <span></span>
         </nav>
-
-        <div id="sidebar" class="bg-danger">
-            <span><img src="assets/mob-ass/Icon.svg" class="cancel" alt="" /></span>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
+        <div id="sidebar" class="p-3">
+          <section class="d-flex align-items-center justify-content-around">
+            <span>Account Information</span>
+            <span class="d-flex justify-content-end">
+              <img src="assets/mob-ass/Icon.svg" class="cancel" alt="" />
+            </span>
+          </section>
+          <section>
+            <span
+              ><span class="img-bg cursor-pointer"
+                ><img
+                  src="assets/mob-ass/user-img.png"
+                  alt=""
+                  class="user-img cursor-pointer" /></span
+            ></span>
+          </section>
+          <ul class="list-unstyled d-flex align-content-center flex-column">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
         </div>
-<!-- For you and Following (Bootstrap) -->
-        <ul class="nav nav-pills">
-            <li class="active hovering">
-                <a href="#1a"   data-toggle="tab">Overview</a>
-            </li>
-            <li><a href="#2a" data-toggle="tab">Using nav-pills</a>
-            </li>
+        <!-- For you and Following (Bootstrap) -->
+        <ul
+          class="nav nav-pills d-flex justify-content-center align-items-center w-100">
+          <li
+            class="active hovering pt3 d-flex justify-content-center align-items-center w-50">
+            <a
+              style="width: 100%; text-align: center; font-size: 15px; "
+              href="#1a"
+              class="tabSwitch"
+              data-toggle="tab"
+              >For you</a
+            >
+          </li>
+          <li
+            class="pt-3 p3 d-flex justify-content-center align-items-center w-50">
+            <a
+              style="width: 100%; text-align: center;"
+              class="tabSwitch"
+              href="#2a"
+              data-toggle="tab"
+              >Following</a
+            >
+          </li>
         </ul>
-
-        <div class="tab-content clearfix">
-            <div class="tab-pane active" id="1a">
-                <h3 class="text-light">Content's background color is the same for the tab</h3>
-            </div>
-            <div class="tab-pane" id="2a">
-                <h3 class="text-danger">We use the class nav-pills instead of nav-tabs which automatically creates a
-                    background color for the tab</h3>
-            </div>
-
+      </section>
+      <div class="tab-content clearfix">
+        <div class="tab-pane screen active text-lights" id="1a">
+          <h3 class="text-light">Post wey be for me go show here</h3>
         </div>
-
-    </div>
-
-
+        <div class="tab-pane scren text-lights" id="2a">
+          <h3 class="text-danger">
+            If you dey follow me and you post i go show here
+          </h3>
+        </div>        
+      </div>
+      
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</body>
-
+  </body>
 </html>
