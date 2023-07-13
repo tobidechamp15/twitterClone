@@ -57,19 +57,9 @@ $(document).ready(function () {
 });
     
 
-<<<<<<< HEAD
-=======
+//function to store in local storage
 
-
-// const topBar = document.querySelector("#mySection")
-// topBar.addEventListener("mouseover", () => {
-//   const section = document.querySelector("nav")
-//   section.classList.remove("hide")
-//   section.classList.add("trans")
-// })
-// topBar.addEventListener("mouseout", () => {
-//   const section = document.querySelector("nav");
-//   section.classList.add("hide");
-// });
-
->>>>>>> f9b082b054018c12326d36042edce649d06e1b49
+function store(key, value) {
+  localStorage.setItem(key, value)
+}
+  //function to get from local storage
