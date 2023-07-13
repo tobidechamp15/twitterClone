@@ -1,6 +1,8 @@
 function toggleSidebar() {
   var sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("active");
+  const homePage = document.querySelector(".home")
+  homePage.style.backgroundColor = "rgb(63, 61, 61)";
   // var overlay = document.getElementById("overlay");
   // overlay.style.display = "block";
 }
@@ -11,6 +13,8 @@ const cancel = document.querySelector(".cancel");
 cancel.addEventListener("click", function () {
   var sidebar = document.getElementById("sidebar");
   sidebar.classList.remove("active");
+  const homePage = document.querySelector(".home");
+  homePage.style.backgroundColor = "black";
   // var overlay = document.getElementById("overlay");
   // overlay.style.display = "none";
 });
@@ -19,6 +23,8 @@ const screens = document.querySelector(".screen");
 screens.addEventListener("click", function () {
   var sidebar = document.getElementById("sidebar");
   sidebar.classList.remove("active");
+  const homePage = document.querySelector(".home");
+  homePage.style.backgroundColor = "black";
 });
 const screns = document.querySelector(".scren");
 screns.addEventListener("click", function () {
@@ -51,3 +57,19 @@ $(document).ready(function () {
 });
     
 
+<<<<<<< HEAD
+=======
+
+
+// const topBar = document.querySelector("#mySection")
+// topBar.addEventListener("mouseover", () => {
+//   const section = document.querySelector("nav")
+//   section.classList.remove("hide")
+//   section.classList.add("trans")
+// })
+// topBar.addEventListener("mouseout", () => {
+//   const section = document.querySelector("nav");
+//   section.classList.add("hide");
+// });
+
+>>>>>>> f9b082b054018c12326d36042edce649d06e1b49

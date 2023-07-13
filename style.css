@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 .home {
   /* height: 100vh; */
@@ -11,9 +12,38 @@
 }
 .img-bg {
   background-color: rgb(104, 104, 108);
-  padding: 5px;
   border-radius: 20px;
   cursor: pointer;
+}
+.profile-bg {
+  background-color: rgb(104, 104, 108);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.profile-img {
+  height: 40px;
+  width: 40px;
+}
+.add-account{
+  width: 18px;
+  height: 18px;
+}
+.add-account-cont{
+  border-radius: 18px;
+  border: .5px solid #c4c7ca ;
+  padding: 6px;
+}
+.fname{
+  font-size: 14px;
+  color: rgb(231, 233, 234);
+  font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+}
+profile-userName{
+  color: #71767B;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 #sidebar {
@@ -22,13 +52,17 @@
   left: -280px; /* Start with the sidebar hidden */
   width: 280px;
   height: 100vh;
-  background-color: #f1f1f1;
+  background-color: rgba(0, 0, 0);
   transition: left 0.3s ease;
   z-index: 999;
 }
 
 #sidebar.active {
   left: 0; /* Show the sidebar */
+}
+.side-top{
+  height: fit-content;
+  padding: 8px;
 }
 .screen {
   height: 100vh;
@@ -93,6 +127,10 @@ a:hover{
   z-index: 9999;
   display: none;
 }
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
-
+.acc-info{
+  color: rgb(231, 233, 234);
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height: 20px;
 }
