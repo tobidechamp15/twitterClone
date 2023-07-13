@@ -40,18 +40,14 @@ posts.addEventListener("keypress",(e)=>{
   console.log(e.key);
 })
 
+$
 
 
+// jquery for beginner
+$(document).ready(function () {
+    $(".menu-btn").click(function () {
+        $(".sidebar").toggleClass("active");
+      });
+});
+    
 
-
-
-// const topBar = document.querySelector("#mySection")
-// topBar.addEventListener("mouseover", () => {
-//   const section = document.querySelector("nav")
-//   section.classList.remove("hide")
-//   section.classList.add("trans")
-// })
-// topBar.addEventListener("mouseout", () => {
-//   const section = document.querySelector("nav");
-//   section.classList.add("hide");
-// });
