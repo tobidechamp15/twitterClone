@@ -62,4 +62,5 @@ $(document).ready(function () {
 function store(key, value) {
   localStorage.setItem(key, value)
 }
-  //function to get from local storage
+ 
+

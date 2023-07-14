@@ -10,10 +10,35 @@
   height: 32px;
   width: 32px;
 }
+.side-list{
+  background-color: black;
+  height: 100%;
+  list-style: none;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  width: fit-content;
+}
+.des-side-img{
+  width: 20px;
+  height: auto;
+}
 .img-bg {
   background-color: rgb(104, 104, 108);
   border-radius: 20px;
   cursor: pointer;
+}
+.des-side-img-cont{
+  padding: 10px;
+  cursor: pointer;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.des-side-img-cont:hover{
+  background-color: #71767B;
+  border-radius: 20px;
+ 
 }
 .profile-bg {
   background-color: rgb(104, 104, 108);
@@ -65,10 +90,10 @@ profile-userName{
   padding: 8px;
 }
 .screen {
-  height: 100vh;
+  height: fit-content;
 }
 .scren {
-  height: 100vh;
+  height: fit-content;
 }
 
 #content {
@@ -133,4 +158,30 @@ a:hover{
   font-weight: 700;
   font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   line-height: 20px;
+}
+.bottom-bar-cont{
+  background-color: black;
+  padding-bottom: 10px;
+}
+.bottom-bar{
+  position: fixed;
+  bottom: 0;
+}
+.tweet{
+  cursor: pointer;
+  width: 
+  45px;
+  height: 45px;
+}
+.bottom-img{
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  /* CSS rules for screens 768px and above */
+  /* Add your styles here */
+  .home{
+    margin-left: 46px;
+  }
 }
