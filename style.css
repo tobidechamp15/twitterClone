@@ -244,6 +244,17 @@ bottom: 0;
 transition: .3s;
 }
 .list1{
+  height: 60px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+}
+
+.list1:hover{
+  transition: .6s;
+  background-color: #1269a3;
+  cursor: pointer;
+  border-radius: 30px;
   
 }
 @media screen and (min-width: 768px) {

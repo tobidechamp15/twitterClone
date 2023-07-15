@@ -87,6 +87,9 @@ $(".drop-down").click(() => {
   } else if (active == "0px") {
     $(".tweet-page").css("background-color", "black");
   }
+  else {
+    console.log("amazing");
+  }
 });
 $(document).ready(function () {
   $('input[name="myRadio"] ').change(function () {
@@ -94,6 +97,11 @@ $(document).ready(function () {
     const selectedValue = $('input[name="myRadio"]:checked').val();
     $("#selectedValue").text(selectedValue);
   });
+  if (selectedValue=="Everyone") {
+    console.log("everyone")
+  } else  {
+    console.log("noto");
+  }
 });
 
 //function to display none .select-drop when an myRadio is seleted
@@ -111,11 +119,11 @@ function changeImage() {
 
   if (imageElement.src.endsWith("drop-down-arrow.png")) {
     // Replace image1.jpg with image2.jpg
-    imageElement.src = "drop-down-arrow.png";
+    imageElement.src = "assets/des-ass/up-arrow.png";
     imageElement.alt = "Image 2";
   } else {
     // Replace image2.jpg with image1.jpg
-    imageElement.src = "image1.jpg";
+    imageElement.src = "assets/des-ass/drop-down-arrow.png";
     imageElement.alt = "Image 1";
   }
 }
