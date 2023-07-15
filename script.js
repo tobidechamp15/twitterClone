@@ -89,9 +89,33 @@ $(".drop-down").click(() => {
   }
 });
 $(document).ready(function () {
-  $('input[name="myRadio"]').change(function () {
-     $("#result").text("Everyone");
-    var selectedValue = $('input[name="myRadio"]:checked').val();
+  $('input[name="myRadio"] ').change(function () {
+    $("#result").text("Everyone");
+    const selectedValue = $('input[name="myRadio"]:checked').val();
     $("#selectedValue").text(selectedValue);
   });
 });
+
+//function to display none .select-drop when an myRadio is seleted
+$(document).ready(function () {
+  $("#selectedValue").change(function () {
+    console.log(kok);
+    $(".select-drop").hide();
+  });
+});
+
+const dropDown = document.querySelector(".drop-down");
+dropDown.addEventListener("click", changeImage);
+function changeImage() {
+  var imageElement = document.querySelector(".drop-down");
+
+  if (imageElement.src.endsWith("drop-down-arrow.png")) {
+    // Replace image1.jpg with image2.jpg
+    imageElement.src = "drop-down-arrow.png";
+    imageElement.alt = "Image 2";
+  } else {
+    // Replace image2.jpg with image1.jpg
+    imageElement.src = "image1.jpg";
+    imageElement.alt = "Image 1";
+  }
+}

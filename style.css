@@ -243,6 +243,9 @@ a:hover{
 bottom: 0;
 transition: .3s;
 }
+.list1{
+  
+}
 @media screen and (min-width: 768px) {
   /* CSS rules for screens 768px and above */
   /* Add your styles here */

@@ -211,16 +211,30 @@
       <section class="tweet-type">
         <span class="text-center'">Choose audience</span>
         <div class="d-flex flex-column">
-          <section class="d-flex gap-2">
-            <div>
-              <input type="radio" name="myRadio" value="Everyone" checked />
-              <label for="option1">Option 1</label>
-              <br />
-              <input type="radio" name="myRadio" value="Twitter Circle" />
-              <label for="Twitter Circle">Twitter Circle</label>
-              
+          <section class="d-flex flex-column gap-2">
+            <div class="d-flex flex-column w-100">
+              <section class="d-flex justify-content-between w-100">
+                <label id="label1" class="w-100 text-start" for="option1"
+                  >Option 1</label
+                >
+                <input
+                  type="radio"
+                  id="option1"
+                  name="myRadio"
+                  value="Everyone"
+                  checked />
+              </section>
+              <section class="d-flex justify-content-between w-100 list1">
+                <label id="label2" class="w-100 text-start" for="TwitterCircle"
+                  >Twitter Circle</label
+                >
+                <input
+                  type="radio"
+                  name="myRadio"
+                  id="TwitterCircle"
+                  value="Twitter Circle" />
+              </section>
             </div>
-            
           </section>
         </div>
       </section>
