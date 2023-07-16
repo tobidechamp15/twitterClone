@@ -105,8 +105,10 @@ profile-userName {
   height: 90%;
   /* padding: 10px; */
 }
-#tweet-cancel {
+#tweet-cancel,.cancel- {
   cursor: pointer;
+  width: 15px;
+  height: 15px;
 }
 .side-top {
   height: fit-content;
@@ -218,6 +220,7 @@ a:hover {
   background-color: #71767b;
   padding: 4px;
   border-radius: 20px;
+  height: fit-content;
 }
 .drop-down {
   width: 16px;
@@ -225,11 +228,14 @@ a:hover {
   cursor: pointer;
 }
 .select-drop {
-  padding: 3px;
-  border: 1px whitesmoke solid;
+  padding: 3px 12px;
+  border: 1px #1d9bf0 solid;
   border-radius: 10px;
   justify-content: center;
   display: flex;
+  width: fit-content;
+  margin-bottom: 10px;
+  align-items: center;
 }
 .tweet-type {
   width: 100%;
@@ -246,7 +252,7 @@ a:hover {
   transition: 0.3s;
 }
 .tweet-top{
-  padding: 30px 5px 5px 5px;
+  padding: 30px 5px 15px 5px;
 }
 .list1 {
   height: 60px;
@@ -260,6 +266,25 @@ a:hover {
   background-color: #1269a3;
   cursor: pointer;
   border-radius: 30px;
+}
+.tweet-type-text{
+  font-size: 14px;
+  color: #1d9bf0;
+  font-weight: 700;
+  line-height: 0;
+}
+.comment-input{
+  /* width: 100%; */
+  outline: none;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  height: 96px;
+  resize: none;
+  background-color: transparent;
+  padding: 10px;
+  padding-left: 0;
+  border: none;
+  color: #c4c7ca;
 }
 @media screen and (min-width: 768px) {
   /* CSS rules for screens 768px and above */

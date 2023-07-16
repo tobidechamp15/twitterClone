@@ -182,7 +182,7 @@
     </div>
     <section class="d-sm-none tweet-page flex-column" id="panel">
       <section class="tweet-top d-flex justify-content-between">
-        <span id="tweet-cancel" class="text-light">Cancel</span>
+        <span id="tweet-cancel" class="text-light"><img class="cancel-" src="assets/mob-ass/left-arrow.png" alt=""></span>
         <div class="tweet-topRight text-light">
           <span>Drafts</span>
           <span>Tweet</span>
@@ -192,14 +192,18 @@
         <span class="tweet-user-bg"
           ><img src="assets/mob-ass/user-img.png" class="tweet-user" alt=""
         /></span>
-        <div>
+        <div class="d-flex flex-column w-100">
           <section
             class="d-flex gap-1 align-items-center justify-content-center select-drop">
-            <span class="text-white" id="selectedValue">Everyone</span>
+            <span class="tweet-type-text" id="selectedValue">Everyone</span>
             <img
               src="assets/des-ass/drop-down-arrow.png"
               class="drop-down"
               alt="" />
+          </section>
+          <textarea name="comment-box" id="comment" class="comment-input" placeholder="What is happening?!"></textarea>
+          <section>
+            span
           </section>
         </div>
       </section>

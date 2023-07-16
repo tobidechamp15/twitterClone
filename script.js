@@ -85,8 +85,10 @@ $(".drop-down").click(() => {
   // console.log(active);
   if (active == "-365.594px") {
     $(".tweet-page").css("background-color", "rgb(63, 61, 61)");
+    $(".home").css("background-color", "rgb(63, 61, 61)");
   } else if (active == "0px") {
     $(".tweet-page").css("background-color", "black");
+    $(".home").css("background-color", "black");
   }
   else {
     // console.log("amazing");
@@ -128,3 +130,8 @@ function changeImage() {
     imageElement.alt = "Image 1";
   }
 }
+
+$("#tweet-cancel, .nava").click(() => {
+  $("#panel").slideToggle(900);
+  console.log("clicking-home");
+});
