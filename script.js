@@ -61,11 +61,12 @@ function store(key, value) {
 
 $(document).ready(function () {
   $("#flip").click(function () {
-    $("#panel").addClass("slide-up");
+    // $("#panel").addClass("slide-up");
     $("#panel").slideToggle(900);
   });
-  $("#tweet-cancel").click(() => {
+  $("#tweet-cancel, .nava").click(() => {
     $("#panel").slideToggle(900);
+    console.log("clicking-home");
   });
 });
 const active = $(".tweet-type").css("bottom");
