@@ -41,7 +41,7 @@ const bird = document.querySelector(".bird", () => {
 
 const posts = document.querySelector("body");
 posts.addEventListener("keypress", (e) => {
-  console.log(e.key);
+  // console.log(e.key);
 });
 
 $;
@@ -69,7 +69,7 @@ $(document).ready(function () {
   });
 });
 const active = $(".tweet-type").css("bottom");
-console.log(active);
+// console.log(active);
 if (active == "-365.594px") {
   $(".tweet-page").css("background-color", "rgb(63, 61, 61)");
 } else if (active == "0px") {
@@ -81,14 +81,14 @@ $(".drop-down").click(() => {
   // homePage.style.backgroundColor = "rgb(63, 61, 61)";
   // $(".tweet-page").css("background-color", "rgb(63, 61, 61)");
   const active = $(".tweet-type").css("bottom");
-  console.log(active);
+  // console.log(active);
   if (active == "-365.594px") {
     $(".tweet-page").css("background-color", "rgb(63, 61, 61)");
   } else if (active == "0px") {
     $(".tweet-page").css("background-color", "black");
   }
   else {
-    console.log("amazing");
+    // console.log("amazing");
   }
 });
 $(document).ready(function () {
@@ -98,16 +98,16 @@ $(document).ready(function () {
     $("#selectedValue").text(selectedValue);
   });
   if (selectedValue=="Everyone") {
-    console.log("everyone")
+    // console.log("everyone")
   } else  {
-    console.log("noto");
+    // console.log("noto");
   }
 });
 
 //function to display none .select-drop when an myRadio is seleted
 $(document).ready(function () {
   $("#selectedValue").change(function () {
-    console.log(kok);
+    // console.log(kok);
     $(".select-drop").hide();
   });
 });
