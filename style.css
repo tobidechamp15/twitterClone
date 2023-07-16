@@ -105,7 +105,7 @@ profile-userName {
   height: 90%;
   /* padding: 10px; */
 }
-#tweet-cancel,.cancel- {
+#tweet-cancel,.cancel-btn {
   cursor: pointer;
   width: 15px;
   height: 15px;

@@ -63,6 +63,7 @@ $(document).ready(function () {
   $("#flip").click(function () {
     // $("#panel").addClass("slide-up");
     $("#panel").slideToggle(900);
+    $(".home").css("background-color", "rgb(63,61,61p)");
   });
   $("#tweet-cancel, .nava").click(() => {
     $("#panel").slideToggle(900);
@@ -131,7 +132,3 @@ function changeImage() {
   }
 }
 
-$("#tweet-cancel, .nava").click(() => {
-  $("#panel").slideToggle(900);
-  console.log("clicking-home");
-});
