@@ -86,7 +86,7 @@ profile-userName {
   transition: 0.7s;
 }
 #panel {
-  padding: 5px;
+  padding: 25px 5px 5px 5px;
   text-align: center;
   width: 100%;
   position: fixed;
