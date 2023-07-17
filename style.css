@@ -91,6 +91,7 @@ profile-userName {
   width: 100%;
   position: fixed;
   bottom: 0;
+  display: none;
   /* display: flex; */
 }
 .display-flex {
@@ -102,7 +103,7 @@ profile-userName {
   /* display: none; */
   /* height: 100vh; */
   /* width: 100%; */
-  height: 90%;
+  height: 100%;
   /* padding: 10px; */
 }
 #tweet-cancel,.cancel-btn {
