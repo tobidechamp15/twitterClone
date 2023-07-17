@@ -32,19 +32,20 @@ screns.addEventListener("click", function () {
   sidebar.classList.remove("active");
 });
 
-const bird = document.querySelector(".bird", () => {
+const bird = document.querySelector(".bird")
+bird.addEventListener("click",  () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
 });
 
+
 const posts = document.querySelector("body");
 posts.addEventListener("keypress", (e) => {
   // console.log(e.key);
 });
 
-$;
 
 // jquery for beginner
 $(document).ready(function () {
@@ -53,23 +54,48 @@ $(document).ready(function () {
   });
 });
 
-//function to store in local storage
 
-function store(key, value) {
-  localStorage.setItem(key, value);
-}
 
-$(document).ready(function () {
-  $("#flip").click(function () {
-    // $("#panel").addClass("slide-up");
-    $("#panel").slideToggle(900);
-    $(".home").css("background-color", "rgb(63,61,61p)");
+$("#tweet-cancel").on("click", () => {
+  const $section = $("#panel");
+  $section.slideToggle();
+})
+$("#flip").on("click", () => {
+  const $section = $("#panel");
+  $section.slideToggle({
+    duration: 500,
+    start: function() {
+      // Log height when animation starts
+      console.log('Animating...'); 
+    },
+    done: function() {
+      // Log height after animation
+      console.log('End Height: ' + $section.height());
+    }
   });
-  $("#tweet-cancel, .nava").click(() => {
-    $("#panel").slideToggle(900);
-    console.log("clicking-home");
-  });
+  // $sectionHeight = $("panel").height();
+
+  console.log($section.height());
+
+  if ($section.height()==0) {
+    console.log('height is 0');
+    $(".home").css("background-color", "black");
+  } else if ($section.height() == 515) {
+    console.log('height is 515');
+    $(".home").css("background-color", "rgb(63, 61, 61)");
+    alert('height is 515')
+  }
+  else {
+    return 1;
+  }
+  
 });
+
+
+
+
+
+
 const active = $(".tweet-type").css("bottom");
 // console.log(active);
 if (active == "-365.594px") {
@@ -94,26 +120,40 @@ $(".drop-down").click(() => {
     // console.log("amazing");
   }
 });
+// $(document).ready(function () {
+//   $('input[name="myRadio"] ').change(function () {
+//     $("#result").text("Everyone");
+//     const selectedValue = $('input[name="myRadio"]:checked').val();
+//     $("#selectedValue").text(selectedValue);
+//   });
+//   if (selectedValue == "Everyone") {
+//     // console.log("everyone")
+//   } else {
+//     // console.log("noto");
+//   }
+// });
 $(document).ready(function () {
-  $('input[name="myRadio"] ').change(function () {
+  $('input[name="myRadio"]').change(function () {
     $("#result").text("Everyone");
     const selectedValue = $('input[name="myRadio"]:checked').val();
     $("#selectedValue").text(selectedValue);
+
+    if (selectedValue == "Everyone") {
+      // console.log("everyone")
+    } else {
+      // console.log("noto");
+    }
   });
-  if (selectedValue == "Everyone") {
-    // console.log("everyone")
-  } else {
-    // console.log("noto");
-  }
 });
 
+
 //function to display none .select-drop when an myRadio is seleted
-$(document).ready(function () {
-  $("#selectedValue").change(function () {
-    // console.log(kok);
-    $(".select-drop").hide();
-  });
-});
+// $(document).ready(function () {
+//   $("#selectedValue").change(function () {
+//     // console.log(kok);
+//     $(".select-drop").hide();
+//   });
+// });
 
 const dropDown = document.querySelector(".drop-down");
 dropDown.addEventListener("click", changeImage);
