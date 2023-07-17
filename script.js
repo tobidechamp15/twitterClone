@@ -90,8 +90,7 @@ $(".drop-down").click(() => {
   } else if (active == "0px") {
     $(".tweet-page").css("background-color", "black");
     $(".home").css("background-color", "black");
-  }
-  else {
+  } else {
     // console.log("amazing");
   }
 });
@@ -101,9 +100,9 @@ $(document).ready(function () {
     const selectedValue = $('input[name="myRadio"]:checked').val();
     $("#selectedValue").text(selectedValue);
   });
-  if (selectedValue=="Everyone") {
+  if (selectedValue == "Everyone") {
     // console.log("everyone")
-  } else  {
+  } else {
     // console.log("noto");
   }
 });
@@ -131,4 +130,3 @@ function changeImage() {
     imageElement.alt = "Image 1";
   }
 }
-
