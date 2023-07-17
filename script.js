@@ -32,19 +32,20 @@ screns.addEventListener("click", function () {
   sidebar.classList.remove("active");
 });
 
-const bird = document.querySelector(".bird", () => {
+const bird = document.querySelector(".bird")
+bird.addEventListener("click",  () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
 });
 
+
 const posts = document.querySelector("body");
 posts.addEventListener("keypress", (e) => {
   // console.log(e.key);
 });
 
-$;
 
 // jquery for beginner
 $(document).ready(function () {
@@ -94,26 +95,40 @@ $(".drop-down").click(() => {
     // console.log("amazing");
   }
 });
+// $(document).ready(function () {
+//   $('input[name="myRadio"] ').change(function () {
+//     $("#result").text("Everyone");
+//     const selectedValue = $('input[name="myRadio"]:checked').val();
+//     $("#selectedValue").text(selectedValue);
+//   });
+//   if (selectedValue == "Everyone") {
+//     // console.log("everyone")
+//   } else {
+//     // console.log("noto");
+//   }
+// });
 $(document).ready(function () {
-  $('input[name="myRadio"] ').change(function () {
+  $('input[name="myRadio"]').change(function () {
     $("#result").text("Everyone");
     const selectedValue = $('input[name="myRadio"]:checked').val();
     $("#selectedValue").text(selectedValue);
+
+    if (selectedValue == "Everyone") {
+      // console.log("everyone")
+    } else {
+      // console.log("noto");
+    }
   });
-  if (selectedValue == "Everyone") {
-    // console.log("everyone")
-  } else {
-    // console.log("noto");
-  }
 });
 
+
 //function to display none .select-drop when an myRadio is seleted
-$(document).ready(function () {
-  $("#selectedValue").change(function () {
-    // console.log(kok);
-    $(".select-drop").hide();
-  });
-});
+// $(document).ready(function () {
+//   $("#selectedValue").change(function () {
+//     // console.log(kok);
+//     $(".select-drop").hide();
+//   });
+// });
 
 const dropDown = document.querySelector(".drop-down");
 dropDown.addEventListener("click", changeImage);

@@ -91,7 +91,7 @@ profile-userName {
   width: 100%;
   position: fixed;
   bottom: 0;
-  display: flex;
+  /* display: flex; */
 }
 .display-flex {
   display: flex;
