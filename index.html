@@ -7,6 +7,9 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
+      <link
+      href="https://fonts.googleapis.com/css?family=Crete Round|Roboto|TwitterChirp|Inter"
+      rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
@@ -15,22 +18,26 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="icon" href="assets/favIcon/Logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap-4.5.0/dist/css/bootstrap.css" />
 
     <title>Home/Twitter|</title>
   </head>
-  <body class="d-md-flex">
-    <div class="d-none d-md-block side-bar">
-      <ul class="d-flex flex-column side-list">
+  <body class="d-sm-flex">
+    <div class="d-none d-sm-block side-bar">
+      
+    </div>
+    <div class="container-fluid home pt-5 ms-0 me-0">
+      <ul class="d-none d-sm-flex flex-column side-list">
         <li class="des-side-img-cont">
           <img
-            src="assets/des-ass/Home.svg"
+            src="assets/des-ass/home.png"
             data-name="Home"
             class="des-side-img"
             alt="" />
         </li>
         <li class="des-side-img-cont">
           <img
-            src="assets/des-ass/Search.svg"
+            src="assets/des-ass/search.png"
             data-name="Search"
             class="des-side-img"
             alt="" />
@@ -58,12 +65,12 @@
           <img src="assets/des-ass/Profile.svg" class="des-side-img" alt="" />
         </li>
       </ul>
-    </div>
-    <div class="container-fluid home pt-5">
+      <div class="w-100 des-content">
+        
       <section class="d-flex flex-column gap-3 top-section" id="mySection">
-        <span class="d-none d-md-block">Home</span>
+        <span class="d-none d-sm-block home-title">Home</span>
         <nav
-          class="d-flex d-md-none justify-content-between align-items-center pt-3 nava"
+          class="d-flex d-sm-none justify-content-between align-items-center pt-3 nava"
           style="transition: 0.5s">
           <span class="img-bg cursor-pointer">
             <img
@@ -75,10 +82,7 @@
             <img src="assets/mob-ass/Logo.svg" class="bird" alt="" />
           </span>
           <span
-            ><img
-              src="assets/des-ass/Feature stroke icon.svg"
-              class="user-img"
-              alt=""
+            ><img src="assets/des-ass/Feature stroke icon.svg" class="user-img"
           /></span>
         </nav>
         <div id="sidebar" class="p-3">
@@ -97,8 +101,11 @@
                 alt=""
                 class="profile-img cursor-pointer" />
             </span>
-            <span class="add-account-cont"
-              ><img src="assets/mob-ass/add-acc.svg" class="add-account" alt=""
+            <span class="addaccount-cont"
+              ><img
+                src="assets/mob-ass/user-add-white.png"
+                class="add-account"
+                alt=""
             /></span>
           </section>
           <section class="d-flex profileName align-itms-center flex-column">
@@ -117,7 +124,7 @@
         </div>
         <!-- For you and Following (Bootstrap) -->
         <ul
-          class="nav nav-pills d-flex justify-content-center align-items-center w-100">
+          class="nav nav-pills d-flex justify-content-center align-items-center w-100 pills">
           <li
             class="active hovering pt3 d-flex justify-content-center align-items-center w-50">
             <a
@@ -125,8 +132,7 @@
               href="#1a"
               class="tabSwitch"
               data-toggle="tab"
-              >For you</a
-            >
+              >For you</a>
           </li>
           <li
             class="pt-3 p3 d-flex justify-content-center align-items-center w-50">
@@ -142,13 +148,36 @@
       </section>
       <div class="tab-content clearfix">
         <div class="tab-pane screen active text-lights" id="1a">
-          <h3 class="text-light">Omoo me i no know wetin dey sup rn sadasff</h3>
-        </div>
+          <section class="d-none  d-sm-flex justify-content-start ">
+            <img src="assets/mob-ass/white-user.png" class="img-des-tweet" alt="">
+            <div class="w-100 pt-2">
+              <section
+            class="d-flex gap-1 align-items-center justify-content-center select-drop">
+            <span class="tweet-type-text" id="selectedValue">Everyone</span>
+            <img
+              src="assets/des-ass/drop-down-arrow.png"
+              class="drop-down"
+              alt="" />
+          </section>
+              <textarea name="tweet-comment" id="tweet-comment" placeholder="What is happening?"></textarea>
+              <section class="d-flex align-content-center gap-2 jutify-content-center mb-3"><img src="assets/mob-ass/public.png" alt="">
+              <span class="text-primary fs-2">Everyone can reply you</span>
+              </section>
+
+
+            </div>
+          </section>
+          </div>
         <div class="tab-pane scren text-lights" id="2a">
           <h3 class="text-danger">
-            If you dey follow me and you post i go show here
+            If you dey follow me and you post i go show here Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Quidem sit cupiditate
+            adipisci quae voluptas fugit, ipsa aperiam. Provident sapiente iure,
+            beatae est voluptates qui eaque temporibus rem, minima commodi
+            corrupti?
           </h3>
         </div>
+      </div>
       </div>
       <section class="bottom-bar gap-5 d-flex flex-column d-sm-none w-100">
         <div class="d-flex justify-content-between pe-3 w-100">
@@ -208,7 +237,9 @@
             id="comment"
             class="comment-input"
             placeholder="What is happening?!"></textarea>
-          <section><textarea name="" id="" cols="30" rows="10"></textarea></section>
+          <section>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </section>
         </div>
       </section>
       <section class="tweet-type">

@@ -16,8 +16,8 @@
   height: 100%;
   list-style: none;
   justify-content: space-around;
-  position: fixed;
-  left: 0;
+  /* position: fixed; */
+  /* left: 0; */
   width: fit-content;
 }
 .des-side-img {
@@ -106,7 +106,8 @@ profile-userName {
   height: 100%;
   /* padding: 10px; */
 }
-#tweet-cancel,.cancel-btn {
+#tweet-cancel,
+.cancel-btn {
   cursor: pointer;
   width: 15px;
   height: 15px;
@@ -252,7 +253,7 @@ a:hover {
   bottom: 0;
   transition: 0.3s;
 }
-.tweet-top{
+.tweet-top {
   padding: 30px 5px 15px 5px;
 }
 .list1 {
@@ -268,13 +269,13 @@ a:hover {
   cursor: pointer;
   border-radius: 30px;
 }
-.tweet-type-text{
+.tweet-type-text {
   font-size: 14px;
   color: #1d9bf0;
   font-weight: 700;
   line-height: 0;
 }
-.comment-input{
+.comment-input {
   /* width: 100%; */
   outline: none;
   white-space: pre-wrap;
@@ -287,11 +288,78 @@ a:hover {
   border: none;
   color: #c4c7ca;
 }
-@media screen and (min-width: 768px) {
+#tweet-comment{
+  outline: none;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  resize: none;
+  background-color: transparent;
+  padding: 12px 0px ;
+  width: 100%;  border: none;
+  color: #c4c7ca;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #e7e9ea;
+  font-style: normal;
+  font-family: TwitterChirp;
+}
+#tweet-comment::placeholder{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #7d7f7f;
+  font-style: normal;
+  font-family: TwitterChirp;
+}
+.img-des-tweet{
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 568px) {
   /* CSS rules for screens 768px and above */
   /* Add your styles here */
   .home {
-    margin-left: 46px;
+    /* padding-left: 46px !important;
+    padding: 0;
+    margin: 0;
+    width: 100% !important; */
+ height: max-content;
+    display: flex !important;
+  }
+  .home-title{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #e7e9ea;
+    margin: 3px;
+  }
+  .pills{
+    position: sticky;
+    top: 0;
+
+  }
+  .side-list{
+    position: fixed;
+    height: 100vh;
+    padding-bottom: 10px;
+    top: 0;
+    padding-left: 0;
+    left: 0;
+    padding-left: 20px ;
+    padding-right: 20px;
+  }
+  .des-content{
+    padding-left: 65px;
+  }
+
+}
+/* CSS code for screens with a width of 575px and above */
+
+@media (min-width: 575px) and (max-width: 786px) {
+  .home{
+    display: flex;
+    height: fit-content !important;
   }
 }
-/* */
