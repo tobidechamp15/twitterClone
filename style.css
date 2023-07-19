@@ -316,7 +316,11 @@ a:hover {
   width: 40px;
   height: 40px;
 }
-@media screen and (min-width: 568px) {
+.public-img{
+  width: 20px;
+  height: 22px;
+}
+@media screen and (min-width: 566px) {
   /* CSS rules for screens 768px and above */
   /* Add your styles here */
   .home {
@@ -352,6 +356,9 @@ a:hover {
   }
   .des-content{
     padding-left: 65px;
+  }
+  .tab-content{
+    display: block !important;
   }
 
 }

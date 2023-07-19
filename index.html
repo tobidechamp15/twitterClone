@@ -7,7 +7,7 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
-      <link
+    <link
       href="https://fonts.googleapis.com/css?family=Crete Round|Roboto|TwitterChirp|Inter"
       rel="stylesheet" />
     <link
@@ -23,9 +23,7 @@
     <title>Home/Twitter|</title>
   </head>
   <body class="d-sm-flex">
-    <div class="d-none d-sm-block side-bar">
-      
-    </div>
+    <div class="d-none d-sm-block side-bar"></div>
     <div class="container-fluid home pt-5 ms-0 me-0">
       <ul class="d-none d-sm-flex flex-column side-list">
         <li class="des-side-img-cont">
@@ -66,118 +64,138 @@
         </li>
       </ul>
       <div class="w-100 des-content">
-        
-      <section class="d-flex flex-column gap-3 top-section" id="mySection">
-        <span class="d-none d-sm-block home-title">Home</span>
-        <nav
-          class="d-flex d-sm-none justify-content-between align-items-center pt-3 nava"
-          style="transition: 0.5s">
-          <span class="img-bg cursor-pointer">
-            <img
-              src="assets/mob-ass/user-img.png"
-              alt=""
-              class="user-img cursor-pointer" />
-          </span>
-          <span>
-            <img src="assets/mob-ass/Logo.svg" class="bird" alt="" />
-          </span>
-          <span
-            ><img src="assets/des-ass/Feature stroke icon.svg" class="user-img"
-          /></span>
-        </nav>
-        <div id="sidebar" class="p-3">
-          <section
-            class="side-top d-flex align-items-center justify-content-around">
-            <span class="acc-info">Account Information</span>
-            <span class="d-flex justify-content-end">
-              <img src="assets/mob-ass/Icon.svg" class="cancel" alt="" />
-            </span>
-          </section>
-          <section
-            class="d-flex justify-content-between p-2 align-items-center">
-            <span class="profile-bg cursor-pointer">
+        <section class="d-flex flex-column gap-3 top-section" id="mySection">
+          <span class="d-none d-sm-block home-title">Home</span>
+          <nav
+            class="d-flex d-sm-none justify-content-between align-items-center pt-3 nava"
+            style="transition: 0.5s">
+            <span class="img-bg cursor-pointer">
               <img
                 src="assets/mob-ass/user-img.png"
                 alt=""
-                class="profile-img cursor-pointer" />
+                class="user-img cursor-pointer" />
             </span>
-            <span class="addaccount-cont"
+            <span>
+              <img src="assets/mob-ass/Logo.svg" class="bird" alt="" />
+            </span>
+            <span
               ><img
-                src="assets/mob-ass/user-add-white.png"
-                class="add-account"
-                alt=""
+                src="assets/des-ass/Feature stroke icon.svg"
+                class="user-img"
             /></span>
-          </section>
-          <section class="d-flex profileName align-itms-center flex-column">
-            <span class="fname">Firstname Surname</span>
-            <span class="profile-userName">@username</span>
-          </section>
-          <section class="d-flex gap-2">
-            <span class="text-light">113 <span>Following</span></span>
-            <span class="text-light">23 Followers</span>
-          </section>
-          <ul class="list-unstyled d-flex align-content-center flex-column">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
+          </nav>
+          <div id="sidebar" class="p-3">
+            <section
+              class="side-top d-flex align-items-center justify-content-around">
+              <span class="acc-info">Account Information</span>
+              <span class="d-flex justify-content-end">
+                <img src="assets/mob-ass/Icon.svg" class="cancel" alt="" />
+              </span>
+            </section>
+            <section
+              class="d-flex justify-content-between p-2 align-items-center">
+              <span class="profile-bg cursor-pointer">
+                <img
+                  src="assets/mob-ass/user-img.png"
+                  alt=""
+                  class="profile-img cursor-pointer" />
+              </span>
+              <span class="addaccount-cont"
+                ><img
+                  src="assets/mob-ass/user-add-white.png"
+                  class="add-account"
+                  alt=""
+              /></span>
+            </section>
+            <section class="d-flex profileName align-itms-center flex-column">
+              <span class="fname">Firstname Surname</span>
+              <span class="profile-userName">@username</span>
+            </section>
+            <section class="d-flex gap-2">
+              <span class="text-light">113 <span>Following</span></span>
+              <span class="text-light">23 Followers</span>
+            </section>
+            <ul class="list-unstyled d-flex align-content-center flex-column">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
+          <!-- For you and Following (Bootstrap) -->
+          <ul
+            class="nav nav-pills d-flex justify-content-center align-items-center w-100 pills">
+            <li
+              class="active hovering pt3 d-flex justify-content-center align-items-center w-50">
+              <a
+                style="text-align: center; font-size: 15px"
+                href="#1a"
+                class="tabSwitch"
+                data-toggle="tab"
+                >For you</a
+              >
+            </li>
+            <li
+              class="pt-3 p3 d-flex justify-content-center align-items-center w-50">
+              <a
+                style="text-align: center"
+                class="tabSwitch"
+                href="#2a"
+                data-toggle="tab"
+                >Following</a>
+            </li>
           </ul>
-        </div>
-        <!-- For you and Following (Bootstrap) -->
-        <ul
-          class="nav nav-pills d-flex justify-content-center align-items-center w-100 pills">
-          <li
-            class="active hovering pt3 d-flex justify-content-center align-items-center w-50">
-            <a
-              style="text-align: center; font-size: 15px"
-              href="#1a"
-              class="tabSwitch"
-              data-toggle="tab"
-              >For you</a>
-          </li>
-          <li
-            class="pt-3 p3 d-flex justify-content-center align-items-center w-50">
-            <a
-              style="text-align: center"
-              class="tabSwitch"
-              href="#2a"
-              data-toggle="tab"
-              >Following</a
-            >
-          </li>
-        </ul>
-      </section>
-      <div class="tab-content clearfix">
-        <div class="tab-pane screen active text-lights" id="1a">
-          <section class="d-none  d-sm-flex justify-content-start ">
-            <img src="assets/mob-ass/white-user.png" class="img-des-tweet" alt="">
-            <div class="w-100 pt-2">
-              <section
+        </section>
+        <div class="tab-content clearfix">
+          <div class="tab-pane screen active text-lights" id="1a">
+            <section class="d-none d-sm-flex justify-content-start">
+              <img
+                src="assets/mob-ass/white-user.png"
+                class="img-des-tweet"
+                alt="" />
+              <div class="w-100 pt-2">
+                <!-- <section
             class="d-flex gap-1 align-items-center justify-content-center select-drop">
             <span class="tweet-type-text" id="selectedValue">Everyone</span>
             <img
               src="assets/des-ass/drop-down-arrow.png"
               class="drop-down"
               alt="" />
-          </section>
-              <textarea name="tweet-comment" id="tweet-comment" placeholder="What is happening?"></textarea>
-              <section class="d-flex align-content-center gap-2 jutify-content-center mb-3"><img src="assets/mob-ass/public.png" alt="">
-              <span class="text-primary fs-2">Everyone can reply you</span>
-              </section>
-
-
-            </div>
-          </section>
+          </section> -->
+                <textarea
+                  name="tweet-comment"
+                  id="tweet-comment"
+                  placeholder="What is happening?"></textarea>
+                <span id="imageContainer">
+                  <img src="#" alt="Selected Image" id="selectedImage" />
+                </span>
+                <section
+                  class="d-none d-sm-flex align-items-center gap-2 jusify-content-center mb-3">
+                  <img
+                    src="assets/mob-ass/microphone.png"
+                    alt="Click me to access the microphone"
+                    id="microphoneImage" />
+                  <input type="file" id="fileButton" style="display: none" />
+                  <img
+                    src="assets/mob-ass/picturadd-e.png"
+                    alt="Click me"
+                    id="fileImage" />
+                  <img src="assets/mob-ass/gif-square.png" alt="" />
+                  <img src="assets/mob-ass/list-bullet.png" alt="" />
+                  <img src="assets/mob-ass/marker-location.png" alt="" />
+                </section>
+              </div>
+            </section>
           </div>
-        <div class="tab-pane scren text-lights" id="2a">
-          <h3 class="text-danger">
-            If you dey follow me and you post i go show here Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Quidem sit cupiditate
-            adipisci quae voluptas fugit, ipsa aperiam. Provident sapiente iure,
-            beatae est voluptates qui eaque temporibus rem, minima commodi
-            corrupti?
-          </h3>
+          <div class="tab-pane scren text-lights" id="2a">
+            <h3 class="text-danger">
+              If you dey follow me and you post i go show here Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Quidem sit cupiditate
+              adipisci quae voluptas fugit, ipsa aperiam. Provident sapiente
+              iure, beatae est voluptates qui eaque temporibus rem, minima
+              commodi corrupti?
+            </h3>
+          </div>
         </div>
-      </div>
       </div>
       <section class="bottom-bar gap-5 d-flex flex-column d-sm-none w-100">
         <div class="d-flex justify-content-between pe-3 w-100">
@@ -192,7 +210,7 @@
         </div>
         <section class="p-2 bottom-bar-cont d-flex justify-content-around">
           <span
-            ><img src="assets/des-ass/Home.svg" class="bottom-img" alt=""
+            ><img src="assets/mob-ass/home.png" class="bottom-img" alt=""
           /></span>
           <span
             ><img src="assets/des-ass/Search.svg" class="bottom-img" alt=""
@@ -211,9 +229,9 @@
     </div>
     <section class="d-sm-none tweet-page flex-column" id="panel">
       <section class="tweet-top d-flex justify-content-between">
-        <section id="tweet-cancel" class="text-light"
-          ><img class="cancel-btn" src="assets/mob-ass/left-arrow.png" alt=""
-        /></section>
+        <section id="tweet-cancel" class="text-light">
+          <img class="cancel-btn" src="assets/mob-ass/left-arrow.png" alt="" />
+        </section>
         <div class="tweet-topRight text-light">
           <span>Drafts</span>
           <span>Tweet</span>

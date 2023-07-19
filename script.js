@@ -96,6 +96,7 @@ $("#flip").on("click", () => {
 
 
 
+
 const active = $(".tweet-type").css("bottom");
 // console.log(active);
 if (active == "-365.594px") {
@@ -170,3 +171,78 @@ function changeImage() {
     imageElement.alt = "Image 1";
   }
 }
+
+ function startSpeechRecognition() {
+   // Check if the browser supports the SpeechRecognition API
+   if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
+     const recognition = new (window.SpeechRecognition ||
+       window.webkitSpeechRecognition)();
+
+     // Add event listener to handle the result of speech recognition
+     recognition.onresult = function (event) {
+       const result = event.results[0][0].transcript;
+       console.log("You said:", result);
+
+       // Do something with the captured speech (e.g., send it to a server for processing, etc.)
+       // Replace this line with your custom logic
+     };
+
+     // Add event listener to handle errors
+     recognition.onerror = function (event) {
+       console.error("Speech recognition error occurred:", event.error);
+     };
+
+     // Start the speech recognition
+     recognition.start();
+   } else {
+     console.error("SpeechRecognition API is not supported in this browser.");
+   }
+ }
+
+ // Add a click event listener to the image
+ const microphoneImage = document.getElementById("microphoneImage");
+microphoneImage.addEventListener("click", startSpeechRecognition);
+ 
+
+// <!-- HTML -->
+// <img src="click-me.jpg" alt="Click me" id="clickImage">
+// <span id="targetSpan"></span>
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fileImage = document.getElementById("fileImage");
+  const fileButton = document.getElementById("fileButton");
+  const selectedImage = document.getElementById("selectedImage");
+  const imageContainer = document.getElementById("imageContainer");
+
+  // Add an event listener to handle the image click
+  fileImage.addEventListener("click", () => fileButton.click());
+
+  // Add an event listener to handle the image selection
+  fileButton.addEventListener("change", handleImageSelection);
+
+  function handleImageSelection(event) {
+    const file = event.target.files[0];
+
+    // Check if a file was selected
+    if (file) {
+      const reader = new FileReader();
+
+      // Read the file and convert it to a data URL
+      reader.readAsDataURL(file);
+
+      // Event triggered when the reading operation is completed
+      reader.onload = function () {
+        // Set the data URL as the source of the image element
+        selectedImage.src = reader.result;
+        selectedImage.style.display = "inline"; // Display the image element
+
+        // Add the image as a child element to the span
+        imageContainer.appendChild(selectedImage);
+      };
+    }
+  }
+});
