@@ -288,14 +288,15 @@ a:hover {
   border: none;
   color: #c4c7ca;
 }
-#tweet-comment{
+#tweet-comment {
   outline: none;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   resize: none;
   background-color: transparent;
-  padding: 12px 0px ;
-  width: 100%;  border: none;
+  padding: 12px 0px;
+  width: 100%;
+  border: none;
   color: #c4c7ca;
   font-size: 20px;
   font-weight: 400;
@@ -304,7 +305,7 @@ a:hover {
   font-style: normal;
   font-family: TwitterChirp;
 }
-#tweet-comment::placeholder{
+#tweet-comment::placeholder {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -312,13 +313,37 @@ a:hover {
   font-style: normal;
   font-family: TwitterChirp;
 }
-.img-des-tweet{
+.img-des-tweet {
   width: 40px;
   height: 40px;
 }
-.public-img{
+.public-img {
   width: 20px;
   height: 22px;
+}
+img{
+  cursor: pointer;
+}
+.tweet-btn {
+  padding: 10px 20px;
+  font-weight: 700;
+  font-family: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 20px;
+  background-color: rgb(29, 155, 240);
+  border: none;
+
+  font-size: 15px;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+.tweet-btn[disabled], html input[disabled] {
+    cursor: default;
+    background-color: rgba(29, 156, 240, 0.498);
+    color: rgba(166, 152, 152, 0.5);
 }
 @media screen and (min-width: 566px) {
   /* CSS rules for screens 768px and above */
@@ -328,10 +353,10 @@ a:hover {
     padding: 0;
     margin: 0;
     width: 100% !important; */
- height: max-content;
+    height: max-content;
     display: flex !important;
   }
-  .home-title{
+  .home-title {
     font-weight: 700;
     font-style: normal;
     font-size: 20px;
@@ -339,33 +364,31 @@ a:hover {
     color: #e7e9ea;
     margin: 3px;
   }
-  .pills{
+  .pills {
     position: sticky;
     top: 0;
-
   }
-  .side-list{
+  .side-list {
     position: fixed;
     height: 100vh;
     padding-bottom: 10px;
     top: 0;
     padding-left: 0;
     left: 0;
-    padding-left: 20px ;
+    padding-left: 20px;
     padding-right: 20px;
   }
-  .des-content{
+  .des-content {
     padding-left: 65px;
   }
-  .tab-content{
+  .tab-content {
     display: block !important;
   }
-
 }
 /* CSS code for screens with a width of 575px and above */
 
 @media (min-width: 575px) and (max-width: 786px) {
-  .home{
+  .home {
     display: flex;
     height: fit-content !important;
   }
