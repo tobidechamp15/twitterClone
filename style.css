@@ -345,6 +345,14 @@ img{
     background-color: rgba(29, 156, 240, 0.498);
     color: rgba(166, 152, 152, 0.5);
 }
+#selectedImage{
+  width: 100%;
+}
+#destinationContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 @media screen and (min-width: 566px) {
   /* CSS rules for screens 768px and above */
   /* Add your styles here */
