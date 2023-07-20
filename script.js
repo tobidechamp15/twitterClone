@@ -236,3 +236,9 @@ function moveImageToDestination() {
 }
 
 tweetButton.addEventListener("click", moveImageToDestination)
+
+
+// Download intel.zip
+
+// Extract to desktop
+
