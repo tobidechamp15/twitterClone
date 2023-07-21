@@ -138,9 +138,6 @@ function startSpeechRecognition() {
     recognition.onresult = function (event) {
       const result = event.results[0][0].transcript;
       console.log("You said:", result);
-
-      // Do something with the captured speech (e.g., send it to a server for processing, etc.)
-      // Replace this line with your custom logic
     };
 
     // Add event listener to handle errors
@@ -159,46 +156,6 @@ function startSpeechRecognition() {
 const microphoneImage = document.getElementById("microphoneImage");
 microphoneImage.addEventListener("click", startSpeechRecognition);
 
-// <!-- HTML -->
-// <img src="click-me.jpg" alt="Click me" id="clickImage">
-// <span id="targetSpan"></span>
-
-document.addEventListener("DOMContentLoaded", () => {
-  const fileImage = document.getElementById("fileImage");
-  const fileButton = document.getElementById("fileButton");
-  const selectedImage = document.getElementById("selectedImage");
-  const imageContainer = document.getElementById("imageContainer");
-
-  // Add an event listener to handle the image click
-  fileImage.addEventListener("click", () => fileButton.click());
-
-  // Add an event listener to handle the image selection
-  fileButton.addEventListener("change", handleImageSelection);
-
-  function handleImageSelection(event) {
-    const file = event.target.files[0];
-
-    // Check if a file was selected
-    if (file) {
-      const reader = new FileReader();
-
-      // Read the file and convert it to a data URL
-      reader.readAsDataURL(file);
-
-      // Event triggered when the reading operation is completed
-      reader.onload = function () {
-        // Set the data URL as the source of the image element
-        selectedImage.src = reader.result;
-        selectedImage.style.display = "inline";
-        imageContainer.appendChild(selectedImage);
-      };
-    }
-  }
-});
-
-// $(".tweet-btn").on(click, function () {
-
-// });
 const inputElement = document.getElementById("tweet-comment");
 console.log(inputElement);
 const tweetButton = document.getElementById("tweet-btn");
@@ -214,31 +171,44 @@ inputElement.addEventListener("input", () => {
   }
 });
 
-function moveImageToDestination() {
-  // Get the source span element by its ID
-  const image = document.getElementById("selectedImage");
+// JavaScript code
+const fileButton = document.getElementById("fileButton");
+const fileSection = document.getElementById("fileSection");
 
-  // Get the image element within the source span
-  // const image = sourceSpan.querySelector("img");
+// Handle the click event on the image
+fileButton.addEventListener("click", function () {
+  // Trigger the click event on the hidden file input
+  const fileInput = document.createElement("input");
+  fileInput.type = "file";
+  fileInput.accept = "image/*"; // Allow only image files
 
-  // Get the destination element by its ID
-  const destination = document.getElementById("destinationContainer");
+  fileInput.addEventListener("change", function () {
+    // When a file is selected, read it and append it to the section
+    const selectedFile = fileInput.files[0];
+    if (selectedFile) {
+      const reader = new FileReader();
 
-  // Append the image to the destination element
-  destination.appendChild(image);
+      reader.onload = function (event) {
+        const imageUrl = event.target.result;
+        const imageElement = document.createElement("img");
+        imageElement.src = imageUrl;
+        imageElement.style.width = "100%";
 
-  const tweet = document.getElementById("tweet-comment");
+        // Append the selected image to the section
+        fileSection.appendChild(imageElement);
+      };
 
-  const destTweet = document.createElement("span")
-  destTweet.innerText = tweet.value
-  destination.appendChild(destTweet)
-  
-}
+      reader.readAsDataURL(selectedFile);
+    }
+  });
 
-tweetButton.addEventListener("click", moveImageToDestination)
+  fileInput.click(); // Trigger the file input dialog
+});
 
 
+tweetButton.addEventListener("click", () => {
+  console.log(document.getElementById("fileSection").el);
+})
 // Download intel.zip
 
 // Extract to desktop
-

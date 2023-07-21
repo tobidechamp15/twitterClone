@@ -345,14 +345,29 @@ html input[disabled] {
   background-color: rgba(29, 156, 240, 0.498);
   color: rgba(166, 152, 152, 0.5);
 }
-#selectedImage {
+#fileSelection {
   width: 100%;
+
 }
+#imageContainer{
+  height: fit-content;
+}
+.selected-image-trans{
+  height: 20px;
+}
+.selected-image-height{
+  height: fit-content;
+}
+
 #destinationContainer {
   display: flex;
   flex-direction: column;
+  height: fit-content;
   gap: 2px;
 }
+/* .tweet-screen {
+  height: 200px;
+} */
 @media screen and (min-width: 566px) {
   /* CSS rules for screens 768px and above */
   /* Add your styles here */
