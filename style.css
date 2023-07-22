@@ -347,15 +347,14 @@ html input[disabled] {
 }
 #fileSelection {
   width: 100%;
-
 }
-#imageContainer{
+#imageContainer {
   height: fit-content;
 }
-.selected-image-trans{
+.selected-image-trans {
   height: 20px;
 }
-.selected-image-height{
+.selected-image-height {
   height: fit-content;
 }
 
@@ -365,15 +364,19 @@ html input[disabled] {
   height: fit-content;
   gap: 2px;
 }
-#fileSection img{
+#fileSection img {
   width: 150px !important;
 }
+.twtImg {
+  width: 150px;
+}
 @media screen and (min-width: 566px) {
-
   .home {
-
     height: max-content;
     display: flex !important;
+  }
+  .des-content {
+    width: 100%;
   }
   .home-title {
     font-weight: 700;
@@ -409,5 +412,15 @@ html input[disabled] {
   .home {
     display: flex;
     height: fit-content !important;
+  }
+}
+@media (min-width: 1008px) {
+  .des-content {
+    width: 70% !important;
+  }
+  .des-content-right {
+    height: 20px !important;
+    background: #e91414;
+    display: flex;
   }
 }

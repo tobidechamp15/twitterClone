@@ -105,9 +105,6 @@ $(document).ready(function () {
     $("#selectedValue").text(selectedValue);
 
     if (selectedValue == "Everyone") {
-      // console.log("everyone")
-    } else {
-      // console.log("noto");
     }
   });
 });
@@ -192,12 +189,12 @@ fileButton.addEventListener("click", function () {
         const imageUrl = event.target.result;
         const imageElement = document.createElement("img");
         imageElement.src = imageUrl;
+        imageElement.classList.add = "twtImg";
         // imageElement.style.width = "100%";
 
         // Append the selected image to the section
         fileSection.appendChild(imageElement);
-            tweetButton.disabled = false;
-
+        tweetButton.disabled = false;
       };
 
       reader.readAsDataURL(selectedFile);
@@ -207,13 +204,17 @@ fileButton.addEventListener("click", function () {
   fileInput.click(); // Trigger the file input dialog
 });
 
-
 tweetButton.addEventListener("click", () => {
-  console.log(document.getElementById("fileSection").el);
-})
+  const tweetText = document.getElementById("tweet-comment").value;
+  const tweetImage = document.getElementById("fileSection");
+  // const tweetUrl = document.getElementById("tweetUrl").value;
 
+  console.log(tweetText);
 
+  console.log(tweetImage);
+});
 
 // Download intel.zip
 
 // Extract to desktop
+
