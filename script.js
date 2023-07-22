@@ -192,10 +192,12 @@ fileButton.addEventListener("click", function () {
         const imageUrl = event.target.result;
         const imageElement = document.createElement("img");
         imageElement.src = imageUrl;
-        imageElement.style.width = "100%";
+        // imageElement.style.width = "100%";
 
         // Append the selected image to the section
         fileSection.appendChild(imageElement);
+            tweetButton.disabled = false;
+
       };
 
       reader.readAsDataURL(selectedFile);
@@ -209,6 +211,9 @@ fileButton.addEventListener("click", function () {
 tweetButton.addEventListener("click", () => {
   console.log(document.getElementById("fileSection").el);
 })
+
+
+
 // Download intel.zip
 
 // Extract to desktop

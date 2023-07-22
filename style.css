@@ -365,17 +365,13 @@ html input[disabled] {
   height: fit-content;
   gap: 2px;
 }
-/* .tweet-screen {
-  height: 200px;
-} */
+#fileSection img{
+  width: 150px !important;
+}
 @media screen and (min-width: 566px) {
-  /* CSS rules for screens 768px and above */
-  /* Add your styles here */
+
   .home {
-    /* padding-left: 46px !important;
-    padding: 0;
-    margin: 0;
-    width: 100% !important; */
+
     height: max-content;
     display: flex !important;
   }
@@ -408,9 +404,8 @@ html input[disabled] {
     display: block !important;
   }
 }
-/* CSS code for screens with a width of 575px and above */
 
-@media (min-width: 575px) and (max-width: 786px) {
+@media (min-width: 565px) and (max-width: 786px) {
   .home {
     display: flex;
     height: fit-content !important;
