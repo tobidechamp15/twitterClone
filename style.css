@@ -371,6 +371,15 @@ html input[disabled] {
 .twtImg {
   width: 150px;
 }
+.tweet-text{
+  font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #e7e9ea;
+    margin: 3px;
+}
+
 @media screen and (min-width: 566px) {
   .home {
     height: max-content;
@@ -509,7 +518,11 @@ html input[disabled] {
     color: #71767b;
     line-height: 13px;
   }
+  
   .postSection{
+    width: 100%;
+  }
+  .postSection img{
     width: 100%;
   }
   .postSectionTop{
@@ -520,8 +533,8 @@ html input[disabled] {
     width: 100%;
   }
   .postSectionMenu{
-    width: 18px;
-    height: 15px;
+    width: 18px !important;
+    height: 15px !important;
   }
   .userName{
     color: #c4c7ca;
@@ -530,6 +543,11 @@ html input[disabled] {
     display: flex;
     gap: 10px;
   }
+  .postImg{
+  width: 100%;
+  border-radius: 20px;
+  height: 300px;
+}
 }
 @media (min-width: 1208px) {
   .des-content-right {
