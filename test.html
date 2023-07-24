@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Vertical Dropdowns</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="dropdown-container">
+    <select class="dropdown" id="dropdown1" onchange="adjustContainerHeight(this)">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+  </div>
+
+  <div class="dropdown-container">
+    <select class="dropdown" id="dropdown2">
+      <option value="choice1">Choice 1</option>
+      <option value="choice2">Choice 2</option>
+      <option value="choice3">Choice 3</option>
+    </select>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>
