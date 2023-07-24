@@ -202,7 +202,8 @@ fileButton.addEventListener("click", function () {
     }
   });
 
-  fileInput.click(); // Trigger the file input dialog
+  fileInput.click(); // Trigger the file input dialog\
+  console.log(fileSection);
 });
 
 
