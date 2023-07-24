@@ -105,9 +105,6 @@ $(document).ready(function () {
     $("#selectedValue").text(selectedValue);
 
     if (selectedValue == "Everyone") {
-      // console.log("everyone")
-    } else {
-      // console.log("noto");
     }
   });
 });
@@ -174,6 +171,7 @@ inputElement.addEventListener("input", () => {
 // JavaScript code
 const fileButton = document.getElementById("fileButton");
 const fileSection = document.getElementById("fileSection");
+const imageElement = document.createElement("img");
 
 // Handle the click event on the image
 fileButton.addEventListener("click", function () {
@@ -192,10 +190,12 @@ fileButton.addEventListener("click", function () {
         const imageUrl = event.target.result;
         const imageElement = document.createElement("img");
         imageElement.src = imageUrl;
-        imageElement.style.width = "100%";
+        imageElement.classList.add("twtImg");
+        // imageElement.style.width = "100%";
 
         // Append the selected image to the section
         fileSection.appendChild(imageElement);
+        tweetButton.disabled = false;
       };
 
       reader.readAsDataURL(selectedFile);
@@ -205,11 +205,111 @@ fileButton.addEventListener("click", function () {
   fileInput.click(); // Trigger the file input dialog\
   console.log(fileSection);
 });
+console.log(imageElement);
+// tweetButton.addEventListener("click", () => {
+//   const tweetText = document.getElementById("tweet-comment").value;
+//   const tweetImage = document.getElementById("fileSection");
+//   const tweetPosted = document.querySelector(".tweetPosted");
+//   // const tweetUrl = document.getElementById("tweetUrl").value;
 
+//   const userImg = document.createElement("img");
+//   userImg.src = "assets/mob-ass/white-user.png";
+//   userImg.classList.add("img-des-tweet");
 
-tweetButton.addEventListener("click", () => {
-  console.log(document.getElementById("fileSection").el);
-})
+//   const postSection = document.createElement("div");
+
+//   const postSectionTop = document.createElement("div");
+//   postSection.classList.add("postSectionTop");
+
+//   const userName = document.createElement("span");
+//   userName.textContent = "Firstname Surname";
+//   userName.classList.add("userName");
+
+//   postSectionTop.appendChild(userName);
+
+//   const postSectionMenu = document.createElement("img");
+//   postSectionMenu.src = "assets/des-ass/tweetMenu.png";
+//   postSectionMenu.classList.add("postSectionMenu");
+
+//   postSectionTop.appendChild(postSectionMenu);
+//   console.log(postSectionTop);
+
+//   postSection.appendChild(postSectionTop);
+
+//   const tweetDescription = document.createElement("span");
+//   tweetDescription.appendChild(document.createTextNode(tweetText));
+
+//   postSection.appendChild(tweetDescription);
+
+//   const postImage = document.createElement("span");
+//   postImage.appendChild(tweetImage);
+//   postSection.appendChild(postImage);
+
+//   const singlePost = document.createElement("div");
+//   singlePost.appendChild("userImg");
+//   userImg.after("postSection");
+
+//   singlePost.classList.add("singlePost");
+
+//   const tweetsPosted = document.querySelector(".tweetsPosted");
+//   // tweetsPosted.appendChild(userImg);
+
+//   tweetsPosted.appendChild(singlePost);
+
+//   console.log(tweetText);
+
+//   console.log(tweetImage);
+// });
+
 // Download intel.zip
 
 // Extract to desktop
+tweetButton.addEventListener("click", () => {
+  const tweetText = document.getElementById("tweet-comment").value;
+  const tweetImage = imageElement
+  const tweetsPosted = document.querySelector(".tweetsPosted");
+
+  const userImg = document.createElement("img");
+  userImg.src = "assets/mob-ass/white-user.png";
+  userImg.classList.add("img-des-tweet");
+
+  const postSection = document.createElement("div");
+  postSection.classList.add("postSection")
+
+  const postSectionTop = document.createElement("div");
+  postSectionTop.classList.add("postSectionTop");
+
+  const userName = document.createElement("span");
+  userName.textContent = "Firstname Surname";
+  userName.classList.add("userName");
+
+  postSectionTop.appendChild(userName);
+
+  const postSectionMenu = document.createElement("img");
+  postSectionMenu.src = "assets/des-ass/tweetMenu.png";
+  postSectionMenu.classList.add("postSectionMenu");
+
+  postSectionTop.appendChild(postSectionMenu);
+  console.log(postSectionTop);
+
+  postSection.appendChild(postSectionTop);
+
+  const tweetDescription = document.createElement("span");
+  tweetDescription.appendChild(document.createTextNode(tweetText));
+
+  postSection.appendChild(tweetDescription);
+
+  const postImage = document.createElement("span");
+  postImage.appendChild(tweetImage);
+  postSection.appendChild(postImage);
+
+  const singlePost = document.createElement("div");
+  singlePost.appendChild(userImg);
+  singlePost.appendChild(postSection);
+  singlePost.classList.add("singlePost");
+
+  tweetsPosted.appendChild(singlePost);
+
+  console.log(tweetText);
+  console.log(tweetImage);
+});
