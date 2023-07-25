@@ -10,6 +10,7 @@
     <link
       href="https://fonts.googleapis.com/css?family=Crete Round|Roboto|TwitterChirp|Inter"
       rel="stylesheet" />
+      <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
@@ -32,6 +33,7 @@
             data-name="Home"
             class="des-side-img"
             alt="" />
+          <span class="list-lg">Home</span>
         </li>
         <li class="des-side-img-cont">
           <img
@@ -39,6 +41,7 @@
             data-name="Search"
             class="des-side-img"
             alt="" />
+          <span class="list-lg">Explore</span>
         </li>
         <li class="des-side-img-cont">
           <img
@@ -46,21 +49,27 @@
             data-name="Notification"
             class="des-side-img"
             alt="" />
+          <span class="list-lg">Notifications</span>
         </li>
         <li class="des-side-img-cont">
           <img src="assets/des-ass/Message.svg" class="des-side-img" alt="" />
+          <span class="list-lg">Messages</span>
         </li>
         <li class="des-side-img-cont">
           <img src="assets/des-ass/List.svg" class="des-side-img" alt="" />
+          <span class="list-lg">List</span>
         </li>
         <li class="des-side-img-cont">
           <img src="assets/des-ass/Bookmark.svg" class="des-side-img" alt="" />
+          <span class="list-lg">Bookmark</span>
         </li>
         <li class="des-side-img-cont">
           <img src="assets/des-ass/More.svg" class="des-side-img" alt="" />
+          <span class="list-lg">More</span>
         </li>
         <li class="des-side-img-cont">
           <img src="assets/des-ass/Profile.svg" class="des-side-img" alt="" />
+          <span class="list-lg">Profile</span>
         </li>
       </ul>
       <div class="des-content">
@@ -157,31 +166,52 @@
             </div>
             <div class="lineDis"></div>
 
-            <section class="d-flex flex-column">
+            <section class="d-flex flex-column p-3">
               <!-- Example single danger button -->
-              <div class="btn-group w-100 h-100">
-                <button
-                  type="button"
-                  class="btn d-flex align-items-center justify-content-between dropdown-toggle"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false">
-                  Creator Studio
-                </button>
-                <div class="dropdown-menu">
-                  <a
-                    class="dropdown-item gap-5 d-flex align-items-center"
-                    href="#"
-                    ><img
-                      src="assets/des-ass/analytics.png"
-                      class="nav-drop-imgs"
-                      alt="" />
-                    Analytics</a
-                  >
-                </div>
+              <div
+                class="d-flex justify-content-between align-items-center"
+                id="createStd">
+                <span class="drop-menu">Creative Studio</span>
+                <img
+                  src="assets/des-ass/drop-down-arrow.png"
+                  class="arrows"
+                  id="stdArrow"
+                  alt="" />
               </div>
-              <span class="text-light">,jsjsjs</span>
-
+              <div class="w-100 gap-3 p-3 hide" id="anal">
+                <img
+                  src="assets/des-ass/analytics.png"
+                  class="nav-drop-imgs"
+                  alt="" />
+                <span class="dropDownItems">Analytics</span>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center"
+                id="createProf">
+                <span class="drop-menu">Professional Tools</span>
+                <img
+                  src="assets/des-ass/drop-down-arrow.png"
+                  class="arrows"
+                  id="stdArrow2"
+                  alt="" />
+              </div>
+              <div class="w-100 gap-3 p-3 hide" id="anal2">
+                <section class="d-flex gap-3">
+                  <img
+                    src="assets/des-ass/analytics.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Twitter for Professionals</span>
+                </section>
+                <section class="d-flex gap-3">
+                  <img
+                    src="assets/des-ass/analytics.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Analytics</span>
+                </section>
+                
+              </div>
               <!-- </div>               -->
             </section>
           </div>
@@ -272,18 +302,35 @@
                     </section>
                     <img src="assets/des-ass/tweetMenu.png" alt="" />
                   </section>
-                  <span class="username mt-3">
+                  <span class="username w-100 mt-3">
                     Mykhalio Mudryk on his potential, playing for Chelsea, and
                     working with Mauricio Pochettino: <br /><br />"I feel good
                     because playing under Poch, our manager, is nice and
                     enjoyable"
                   </span>
-                  <img src="assets/des-ass/mudryk.jfif" class="tweetImages" alt="">
-                  <section class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
-                    <img class="postAtt" src="assets/des-ass/comment-alt-middle.png" alt="">34
-                    <img class="postAtt" src="assets/des-ass/retweet.png" alt="">247
-                    <img class="postAtt" id="like-btn" src="assets/mob-ass/like-btn.png" alt="">5,367
-                    <img class="postAtt" src="assets/des-ass/tweet-analytics.png" alt="">267.3K
+                  <img
+                    src="assets/des-ass/mudryk.jfif"
+                    class="tweetImages"
+                    alt="" />
+                  <section
+                    class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/comment-alt-middle.png"
+                      alt="" />34
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/retweet.png"
+                      alt="" />247
+                    <img
+                      class="postAtt"
+                      id="like-btn"
+                      src="assets/mob-ass/like-btn.png"
+                      alt="" />5,367
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/tweet-analytics.png"
+                      alt="" />267.3K
                   </section>
                 </div>
               </div>

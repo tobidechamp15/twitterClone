@@ -305,13 +305,23 @@ likeBtn.addEventListener("click", () => {
   var newSrc = "assets/mob-ass/liked-btn.png";
   console.log(currentSrc);
 
-  if (likeBtn.src == "assets/mob-ass/like-btn.png") {
+  if (likeBtn.src = "currentSrc") {
     var newSrc = "assets/mob-ass/liked-btn.png";
     likeBtn.setAttribute("src", newSrc);
 
-    console.log("still-pink");
-  } else if (likeBtn.src == "assets/mob-ass/like-btn.png") {
+    // console.log(likeBtn.src");
+  } else if (likeBtn.src = "newSrc") {
     var currentSrc = "assets/mob-ass/like-btn.png";
     likeBtn.setAttribute("src", currentSrc);
   }
+});
+
+
+$("#createStd").on("click", () => {
+  $("#anal").toggleClass("hide dropDownSec");
+  $("#stdArrow").toggleClass("rotate-arrow");
+});
+$("#createProf").on("click", () => {
+  $("#anal2").toggleClass("hide  ");
+  $("#stdArrow2").toggleClass("rotate-arrow");
 });
