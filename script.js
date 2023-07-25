@@ -175,8 +175,6 @@ inputElement.addEventListener("input", () => {
   }
 });
 
-
-
 const mobInputElement = document.querySelector(".comment-input");
 
 const mobTweetBtn = document.querySelector("#mobTweet-btn");
@@ -300,4 +298,20 @@ tweetButton.addEventListener("click", () => {
   console.log(tweetImage);
 });
 
-const 
+const likeBtn = document.querySelector("#like-btn");
+
+likeBtn.addEventListener("click", () => {
+  var currentSrc = likeBtn.getAttribute("src");
+  var newSrc = "assets/mob-ass/liked-btn.png";
+  console.log(currentSrc);
+
+  if (likeBtn.src == "assets/mob-ass/like-btn.png") {
+    var newSrc = "assets/mob-ass/liked-btn.png";
+    likeBtn.setAttribute("src", newSrc);
+
+    console.log("still-pink");
+  } else if (likeBtn.src == "assets/mob-ass/like-btn.png") {
+    var currentSrc = "assets/mob-ass/like-btn.png";
+    likeBtn.setAttribute("src", currentSrc);
+  }
+});
