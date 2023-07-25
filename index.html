@@ -248,6 +248,7 @@
                     Tweet
                   </button>
                 </section>
+
                 <div class="text-warning fw-bolder fs-5 bg-primary" id="">
                   <section>
                     <span> </span>
@@ -259,6 +260,34 @@
               </div>
             </section>
             <section class="tweetsPosted d-flex flex-column gap-5"></section>
+
+            <section class="d-flex flex-column w-100">
+              <div class="d-flex w-100 gap-2">
+                <img src="assets/des-ass/chelDogg.jpg" class="imgProfile" />
+                <div class="d-flex flex-column align-items-center w-100">
+                  <section class="d-flex tweetTop w-100">
+                    <section userDetails>
+                      <span class="username">Chelsea Dodgers</span>
+                      <span class="accName">@TheBlueDodger.17h </span>
+                    </section>
+                    <img src="assets/des-ass/tweetMenu.png" alt="" />
+                  </section>
+                  <span class="username mt-3">
+                    Mykhalio Mudryk on his potential, playing for Chelsea, and
+                    working with Mauricio Pochettino: <br /><br />"I feel good
+                    because playing under Poch, our manager, is nice and
+                    enjoyable"
+                  </span>
+                  <img src="assets/des-ass/mudryk.jfif" class="tweetImages" alt="">
+                  <section class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img class="postAtt" src="assets/des-ass/comment-alt-middle.png" alt="">34
+                    <img class="postAtt" src="assets/des-ass/retweet.png" alt="">247
+                    <img class="postAtt" id="like-btn" src="assets/mob-ass/like-btn.png" alt="">5,367
+                    <img class="postAtt" src="assets/des-ass/tweet-analytics.png" alt="">267.3K
+                  </section>
+                </div>
+              </div>
+            </section>
           </div>
           <div class="tab-pane scren text-lights" id="2a">
             <h3 class="text-danger">
@@ -399,15 +428,19 @@
           <img class="cancel-btn" src="assets/mob-ass/left-arrow.png" alt="" />
         </section>
         <div class="tweet-topRight text-light">
-          <span>Drafts</span>
-          <span>Tweet</span>
+          <button
+            disabled="disabled"
+            id="mobTweet-btn"
+            class="d-flex tweet-btn me-2">
+            Tweet
+          </button>
         </div>
       </section>
       <section class="d-flex gap-2">
         <span class="tweet-user-bg"
           ><img src="assets/mob-ass/user-img.png" class="tweet-user" alt=""
         /></span>
-        <div class="d-flex flex-column w-100">
+        <div class="d-flex flex-column ps-5 w-100">
           <section
             class="d-flex gap-1 align-items-center justify-content-center select-drop">
             <span class="tweet-type-text" id="selectedValue">Everyone</span>
@@ -421,7 +454,6 @@
             id="comment"
             class="comment-input"
             placeholder="What is happening?!"></textarea>
-          <section></section>
         </div>
       </section>
       <section class="tweet-type">

@@ -1,8 +1,7 @@
 var imageUrl;
-//var fileSection;
 
 const anotherImage = document.createElement("img");
-    anotherImage.classList.add("postImg");
+anotherImage.classList.add("postImg");
 
 function toggleSidebar() {
   var sidebar = document.getElementById("sidebar");
@@ -20,6 +19,8 @@ cancel.addEventListener("click", function () {
   const homePage = document.querySelector(".home");
   homePage.style.backgroundColor = "black";
 });
+
+$;
 
 const screens = document.querySelector(".screen");
 screens.addEventListener("click", function () {
@@ -174,6 +175,23 @@ inputElement.addEventListener("input", () => {
   }
 });
 
+
+
+const mobInputElement = document.querySelector(".comment-input");
+
+const mobTweetBtn = document.querySelector("#mobTweet-btn");
+
+mobInputElement.addEventListener("input", () => {
+  // Check if the input has a value
+  if (mobInputElement.value.trim() !== "") {
+    // Enable the button if the input has a value
+    mobTweetBtn.disabled = false;
+  } else {
+    // Disable the button if the input is empty
+    mobTweetBtn.disabled = true;
+  }
+});
+
 // JavaScript code
 const fileButton = document.getElementById("fileButton");
 const fileSection = document.getElementById("fileSection");
@@ -209,7 +227,7 @@ fileButton.addEventListener("click", function () {
     tweetButton.addEventListener("click", () => {
       const imageElement = fileSection.querySelector("img");
       if (imageElement) {
-        const imageToPost = document.createElement("img")
+        const imageToPost = document.createElement("img");
         imageToPost.src = imageElement.src;
 
         anotherImage.parentNode.replaceChild(imageToPost, anotherImage);
@@ -217,7 +235,7 @@ fileButton.addEventListener("click", function () {
         fileSection.removeChild(imageElement);
         fileInput.value = null;
       }
-    })
+    });
   });
 
   fileInput.click(); // Trigger the file input dialog\
@@ -230,7 +248,7 @@ console.log(imageElement);
 // Extract to desktop
 tweetButton.addEventListener("click", () => {
   const tweetText = document.getElementById("tweet-comment").value;
-  const tweetImage = imageElement
+  const tweetImage = imageElement;
   const tweetsPosted = document.querySelector(".tweetsPosted");
 
   const userImg = document.createElement("img");
@@ -238,7 +256,7 @@ tweetButton.addEventListener("click", () => {
   userImg.classList.add("img-des-tweet");
 
   const postSection = document.createElement("div");
-  postSection.classList.add("postSection")
+  postSection.classList.add("postSection");
 
   const postSectionTop = document.createElement("div");
   postSectionTop.classList.add("postSectionTop");
@@ -260,14 +278,12 @@ tweetButton.addEventListener("click", () => {
 
   const tweetDescription = document.createElement("span");
   tweetDescription.appendChild(document.createTextNode(tweetText));
-  tweetDescription.classList.add("tweet-text")
+  tweetDescription.classList.add("tweet-text");
   console.log(tweetDescription);
 
   postSection.appendChild(tweetDescription);
-  
-  postSection.appendChild(anotherImage);
-  
 
+  postSection.appendChild(anotherImage);
 
   // postImage.src = imageUrl;
 
@@ -283,3 +299,5 @@ tweetButton.addEventListener("click", () => {
   console.log(tweetText);
   console.log(tweetImage);
 });
+
+const 
