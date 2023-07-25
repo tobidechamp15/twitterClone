@@ -494,7 +494,7 @@ html input[disabled] {
   display: none;
 }
 .drop-menu {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   color: #e7e9ea;
@@ -522,6 +522,10 @@ html input[disabled] {
 }
 .hide {
   display: none !important;
+}
+.ads-img{
+  border: 2px solid #fff;
+  padding: 5px;
 }
 @media screen and (min-width: 566px) {
   .home {

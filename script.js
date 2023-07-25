@@ -325,3 +325,7 @@ $("#createProf").on("click", () => {
   $("#anal2").toggleClass("hide  ");
   $("#stdArrow2").toggleClass("rotate-arrow");
 });
+$("#createSett").on("click", () => {
+  $("#anal3").toggleClass("hide  ");
+  $("#stdArrow3").toggleClass("rotate-arrow");
+});
