@@ -26,52 +26,57 @@
   <body class="d-sm-flex">
     <div class="d-none d-sm-block side-bar"></div>
     <div class="container-fluid home pt-5 ms-0 me-0">
-      <ul class="d-none d-sm-flex flex-column side-list">
-        <li class="des-side-img-cont">
-          <img
-            src="assets/des-ass/home.png"
-            data-name="Home"
-            class="des-side-img"
-            alt="" />
-          <span class="list-lg">Home</span>
-        </li>
-        <li class="des-side-img-cont">
-          <img
-            src="assets/des-ass/search.png"
-            data-name="Search"
-            class="des-side-img"
-            alt="" />
-          <span class="list-lg">Explore</span>
-        </li>
-        <li class="des-side-img-cont">
-          <img
-            src="assets/des-ass/Notification.svg"
-            data-name="Notification"
-            class="des-side-img"
-            alt="" />
-          <span class="list-lg">Notifications</span>
-        </li>
-        <li class="des-side-img-cont">
-          <img src="assets/des-ass/Message.svg" class="des-side-img" alt="" />
-          <span class="list-lg">Messages</span>
-        </li>
-        <li class="des-side-img-cont">
-          <img src="assets/des-ass/List.svg" class="des-side-img" alt="" />
-          <span class="list-lg">List</span>
-        </li>
-        <li class="des-side-img-cont">
-          <img src="assets/des-ass/Bookmark.svg" class="des-side-img" alt="" />
-          <span class="list-lg">Bookmark</span>
-        </li>
-        <li class="des-side-img-cont">
-          <img src="assets/des-ass/More.svg" class="des-side-img" alt="" />
-          <span class="list-lg">More</span>
-        </li>
-        <li class="des-side-img-cont">
-          <img src="assets/des-ass/Profile.svg" class="des-side-img" alt="" />
-          <span class="list-lg">Profile</span>
-        </li>
-      </ul>
+      <section class="d-flex justify-content-between side-list">
+        <ul class="d-none d-sm-flex flex-column side-lists">
+          <li class="des-side-img-cont">
+            <img
+              src="assets/des-ass/home.png"
+              data-name="Home"
+              class="des-side-img"
+              alt="" />
+            <span class="list-lg">Home</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img
+              src="assets/des-ass/search.png"
+              data-name="Search"
+              class="des-side-img"
+              alt="" />
+            <span class="list-lg">Explore</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img
+              src="assets/des-ass/Notification.svg"
+              data-name="Notification"
+              class="des-side-img"
+              alt="" />
+            <span class="list-lg">Notifications</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img src="assets/des-ass/Message.svg" class="des-side-img" alt="" />
+            <span class="list-lg">Messages</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img src="assets/des-ass/List.svg" class="des-side-img" alt="" />
+            <span class="list-lg">List</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img
+              src="assets/des-ass/Bookmark.svg"
+              class="des-side-img"
+              alt="" />
+            <span class="list-lg">Bookmark</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img src="assets/des-ass/More.svg" class="des-side-img" alt="" />
+            <span class="list-lg">More</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img src="assets/des-ass/Profile.svg" class="des-side-img" alt="" />
+            <span class="list-lg">Profile</span>
+          </li>
+        </ul>
+      </section>
       <div class="des-content">
         <section class="d-flex flex-column gap-3 top-section" id="mySection">
           <span class="d-none d-sm-block home-title">Home</span>
@@ -236,35 +241,37 @@
                     alt="" />
                   <span class="dropDownItems">Help center</span>
                 </section>
-                 <section class="d-flex gap-3 mt-3">
+                <section class="d-flex gap-3 mt-3">
                   <img
                     src="assets/des-ass/dataSaver.png"
                     class="nav-drop-imgs"
                     alt="" />
                   <span class="dropDownItems">Data Saver</span>
                 </section>
-                 <section class="d-flex gap-3 mt-3">
+                <section class="d-flex gap-3 mt-3">
                   <img
                     src="assets/des-ass/display.png"
                     class="nav-drop-imgs"
                     alt="" />
                   <span class="dropDownItems">Display</span>
                 </section>
-                 <section class="d-flex gap-3 mt-3">
+                <section class="d-flex gap-3 mt-3">
                   <img
                     src="assets/des-ass/arrow-up-right.png"
                     class="nav-drop-imgs"
                     alt="" />
                   <span class="dropDownItems">Keyboard Shortcuts</span>
                 </section>
-                 <section class="d-flex gap-3 mt-3">
+                <section class="d-flex gap-3 mt-3">
                   <img
                     src="assets/des-ass/logOut.png"
                     class="nav-drop-imgs"
                     alt="" />
-                  <span class="dropDownItems">Log out</span>
+                  <span class="dropDownItems" id="showLoginButton"
+                    >Log out</span
+                  >
                 </section>
-                 <section class="d-flex gap-3 mt-3">
+                <section class="d-flex gap-3 mt-3">
                   <img
                     src="assets/des-ass/arrow-up-right.png"
                     class="nav-drop-imgs"
@@ -274,6 +281,29 @@
               </div>
               <!-- </div>  -->
             </section>
+          </div>
+          <!-- Button to show the login overlay -->
+          <!-- <button id="showLoginButton">Login</button> -->
+
+          <!-- Overlay Container -->
+          <div class="overlay-container" id="overlayContainer">
+            <div class="login-overlay d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="assets/des-ass/X.png" class="twitX" alt="" />
+              </div>
+              <span class="d-flex align-self-start logOutQuestion"
+                >Log out of Twitter?</span
+              >
+              <span class="logOutDes"
+                >You can always log back in at any time. If you just want to
+                switch accounts, you can do that by adding an existing
+                account.</span
+              >
+              <div class="d-flex flex-column logOut-cancel">
+                <span class="logOutBtn"> Log out </span>
+                <span class="logOutBtn"> Cancel </span>
+              </div>
+            </div>
           </div>
 
           <!-- For you and Following (Bootstrap) -->
@@ -316,7 +346,7 @@
                   placeholder="What is happening?"></textarea>
                 <section id="fileSection"></section>
                 <section
-                  class="d-none d-sm-flex align-items-center justify-content-between mb-3 mt-2">
+                  class="d-flex align-items-center justify-content-between mb-3 mt-2">
                   <section class="d-flex gap-4">
                     <img
                       src="assets/mob-ass/microphone.png"
@@ -352,7 +382,7 @@
             <section class="tweetsPosted d-flex flex-column gap-5"></section>
 
             <section class="d-flex flex-column w-100">
-              <div class="d-flex w-100 gap-2">
+              <div class="d-flex w-100 gap-2 singlePost pb-0 mb-2">
                 <img src="assets/des-ass/chelDogg.jpg" class="imgProfile" />
                 <div class="d-flex flex-column align-items-center w-100">
                   <section class="d-flex tweetTop w-100">
@@ -394,16 +424,131 @@
                   </section>
                 </div>
               </div>
+              <div class="d-flex w-100 gap-2 singlePost pb-0 mb-2 mt-5">
+                <img src="assets/des-ass/modCv.jpg" class="imgProfile" />
+                <div class="d-flex flex-column align-items-center w-100">
+                  <section class="d-flex tweetTop w-100">
+                    <section userDetails>
+                      <span class="username">Mod</span>
+                      <span class="accName">@CFCMod.2days ago </span>
+                    </section>
+                    <img src="assets/des-ass/tweetMenu.png" alt="" />
+                  </section>
+                  <span class="username w-100 mt-3">
+                    New kit added to the collection
+                  </span>
+                  <img
+                    src="assets/des-ass/mod.jfif"
+                    class="tweetImages"
+                    alt="" />
+                  <section
+                    class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/comment-alt-middle.png"
+                      alt="" />35M
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/retweet.png"
+                      alt="" />27
+                    <img
+                      class="postAtt"
+                      id="like-btn"
+                      src="assets/mob-ass/like-btn.png"
+                      alt="" />567
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/tweet-analytics.png"
+                      alt="" />267.3M
+                  </section>
+                </div>
+              </div>
             </section>
           </div>
           <div class="tab-pane scren text-lights" id="2a">
-            <h3 class="text-danger">
-              If you dey follow me and you post i go show here Lorem ipsum dolor
-              sit amet, consectetur adipisicing elit. Quidem sit cupiditate
-              adipisci quae voluptas fugit, ipsa aperiam. Provident sapiente
-              iure, beatae est voluptates qui eaque temporibus rem, minima
-              commodi corrupti?
-            </h3>
+            <section class="d-flex mt-4 flex-column w-100">
+              <div class="d-flex w-100 gap-2 singlePost pb-0 mb-2">
+                <img src="assets/des-ass/chelDogg.jpg" class="imgProfile" />
+                <div class="d-flex flex-column align-items-center w-100">
+                  <section class="d-flex tweetTop w-100">
+                    <section userDetails>
+                      <span class="username">Chelsea Dodgers</span>
+                      <span class="accName">@TheBlueDodger.17h </span>
+                    </section>
+                    <img src="assets/des-ass/tweetMenu.png" alt="" />
+                  </section>
+                  <span class="username w-100 mt-3">
+                    Mykhalio Mudryk on his potential, playing for Chelsea, and
+                    working with Mauricio Pochettino: <br /><br />"I feel good
+                    because playing under Poch, our manager, is nice and
+                    enjoyable"
+                  </span>
+                  <img
+                    src="assets/des-ass/mudryk.jfif"
+                    class="tweetImages"
+                    alt="" />
+                  <section
+                    class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/comment-alt-middle.png"
+                      alt="" />34
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/retweet.png"
+                      alt="" />247
+                    <img
+                      class="postAtt"
+                      id="like-btn"
+                      src="assets/mob-ass/like-btn.png"
+                      alt="" />5,367
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/tweet-analytics.png"
+                      alt="" />267.3K
+                  </section>
+                </div>
+              </div>
+              <div class="d-flex w-100 gap-2 singlePost pb-0 mb-2 mt-5">
+                <img src="assets/des-ass/modCv.jpg" class="imgProfile" />
+                <div class="d-flex flex-column align-items-center w-100">
+                  <section class="d-flex tweetTop w-100">
+                    <section userDetails>
+                      <span class="username">Mod</span>
+                      <span class="accName">@CFCMod.2days ago </span>
+                    </section>
+                    <img src="assets/des-ass/tweetMenu.png" alt="" />
+                  </section>
+                  <span class="username w-100 mt-3">
+                    New kit added to the collection
+                  </span>
+                  <img
+                    src="assets/des-ass/mod.jfif"
+                    class="tweetImages"
+                    alt="" />
+                  <section
+                    class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/comment-alt-middle.png"
+                      alt="" />35M
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/retweet.png"
+                      alt="" />27
+                    <img
+                      class="postAtt"
+                      id="like-btn"
+                      src="assets/mob-ass/like-btn.png"
+                      alt="" />567
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/tweet-analytics.png"
+                      alt="" />267.3M
+                  </section>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
@@ -433,10 +578,7 @@
               </section>
             </div>
             <div class="d-flex justify-content-between mt-3">
-              <span class="desVer"
-                >All the rumours we heard about the BBNaija All Stars
-                #sabiradio</span
-              >
+              <span class="desVer">All the rumours we heard </span>
               <section class="spaces-acc">
                 <img
                   src="assets/des-ass/BLOG_Twitter-Spaces.png"
@@ -454,7 +596,7 @@
               <span class="trendAspect">Sports . Trending</span>
               <span class="menu"></span>
             </div>
-            <span class="trendName">#MUNARS</span>
+            <span class="trendName">Slonina</span>
             <span class="tweetsNum">9,677k Tweets</span>
           </section>
           <section class="d-flex flex-column gap-1">
@@ -462,7 +604,7 @@
               <span class="trendAspect">Sports . Trending</span>
               <span class="menu"></span>
             </div>
-            <span class="trendName">#MUNARS</span>
+            <span class="trendName">Uriel</span>
             <span class="tweetsNum">9,677k Tweets</span>
           </section>
           <section class="d-flex flex-column gap-1">
@@ -470,32 +612,32 @@
               <span class="trendAspect">Sports . Trending</span>
               <span class="menu"></span>
             </div>
-            <span class="trendName">#MUNARS</span>
-            <span class="tweetsNum">9,677k Tweets</span>
+            <span class="trendName">#SamsungUnpackedNG</span>
+            <span class="tweetsNum">5.9M Tweets</span>
           </section>
           <section class="d-flex flex-column gap-1">
             <div class="trends-top d-flex justify-content-between">
               <span class="trendAspect">Sports . Trending</span>
               <span class="menu"></span>
             </div>
-            <span class="trendName">#MUNARS</span>
-            <span class="tweetsNum">9,677k Tweets</span>
+            <span class="trendName">Strasbourg</span>
+            <span class="tweetsNum">78M Tweets</span>
           </section>
           <section class="d-flex flex-column gap-1">
             <div class="trends-top d-flex justify-content-between">
               <span class="trendAspect">Sports . Trending</span>
               <span class="menu"></span>
             </div>
-            <span class="trendName">#MUNARS</span>
-            <span class="tweetsNum">9,677k Tweets</span>
+            <span class="trendName">CGPA</span>
+            <span class="tweetsNum">67M Tweets</span>
           </section>
           <section class="d-flex flex-column gap-1">
             <div class="trends-top d-flex justify-content-between">
               <span class="trendAspect">Sports . Trending</span>
               <span class="menu"></span>
             </div>
-            <span class="trendName">#MUNARS</span>
-            <span class="tweetsNum">9,677k Tweets</span>
+            <span class="trendName">Congratulations Mayor</span>
+            <span class="tweetsNum">9,6M Tweets</span>
           </section>
         </section>
       </section>

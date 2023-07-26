@@ -20,8 +20,6 @@ cancel.addEventListener("click", function () {
   homePage.style.backgroundColor = "black";
 });
 
-$;
-
 const screens = document.querySelector(".screen");
 screens.addEventListener("click", function () {
   var sidebar = document.getElementById("sidebar");
@@ -305,17 +303,16 @@ likeBtn.addEventListener("click", () => {
   var newSrc = "assets/mob-ass/liked-btn.png";
   console.log(currentSrc);
 
-  if (likeBtn.src = "currentSrc") {
+  if ((likeBtn.src = "currentSrc")) {
     var newSrc = "assets/mob-ass/liked-btn.png";
     likeBtn.setAttribute("src", newSrc);
 
     // console.log(likeBtn.src");
-  } else if (likeBtn.src = "newSrc") {
+  } else if ((likeBtn.src = "newSrc")) {
     var currentSrc = "assets/mob-ass/like-btn.png";
     likeBtn.setAttribute("src", currentSrc);
   }
 });
-
 
 $("#createStd").on("click", () => {
   $("#anal").toggleClass("hide dropDownSec");
@@ -328,4 +325,42 @@ $("#createProf").on("click", () => {
 $("#createSett").on("click", () => {
   $("#anal3").toggleClass("hide  ");
   $("#stdArrow3").toggleClass("rotate-arrow");
+});
+
+// Function to show the login overlay
+function showLoginOverlay() {
+  const overlayContainer = document.getElementById("overlayContainer");
+  overlayContainer.style.display = "flex";
+  var sidebar = document.getElementById("sidebar");
+  sidebar.classList.remove("active");
+}
+console.log(5 + 9);
+
+// Function to hide the login overlay
+function hideLoginOverlay() {
+  const overlayContainer = document.getElementById("overlayContainer");
+  overlayContainer.style.display = "none";
+}
+
+// Event listener to show the overlay when the button is clicked
+const showLoginButton = document.getElementById("showLoginButton");
+showLoginButton.addEventListener("click", showLoginOverlay);
+
+// Event listener to hide the overlay when clicking outside the login form
+const overlayContainer = document.getElementById("overlayContainer");
+overlayContainer.addEventListener("click", (event) => {
+  if (event.target === overlayContainer) {
+    hideLoginOverlay();
+  }
+});
+
+// Event listener to handle form submission
+const loginForm = document.getElementById("loginForm");
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Perform any necessary actions here, such as sending login data to the server
+
+  // Hide the overlay after form submission (optional)
+  hideLoginOverlay();
 });
