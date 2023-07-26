@@ -394,12 +394,9 @@ html input[disabled] {
   width: 150px;
 }
 .tweet-text {
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 24px;
+   font-weight: 700;
+  font-size: 15px;
   color: #e7e9ea;
-  margin: 3px;
 }
 .singlePost {
   display: flex;
@@ -753,7 +750,7 @@ html input[disabled] {
   background-color: #000000;
   padding: 28px;
   border-radius: 5px;
-  width: 100%;
+  width: 320px;
   border-radius: 30px;
 }
 
@@ -796,6 +793,7 @@ html input[disabled] {
 }
 .logOut-cancel{
   margin-top: 24px;
+  gap: 10px;
 }
 .logOutBtn {
   background-color: #eff3f4;
@@ -807,7 +805,24 @@ html input[disabled] {
   font-weight: 700;
   line-height: 20px;
   color: #0f1419;
-  padding: 21px;
+  padding: 10px 21px ;
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+.cancelBtn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #eff3f4;
+  background-color: #000000;
+  padding: 10px 21px ;
+  border: 1px solid #536471;
   border-bottom-left-radius: 9999px;
   border-bottom-right-radius: 9999px;
   border-top-left-radius: 9999px;

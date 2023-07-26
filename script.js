@@ -347,20 +347,26 @@ const showLoginButton = document.getElementById("showLoginButton");
 showLoginButton.addEventListener("click", showLoginOverlay);
 
 // Event listener to hide the overlay when clicking outside the login form
-const overlayContainer = document.getElementById("overlayContainer");
-overlayContainer.addEventListener("click", (event) => {
-  if (event.target === overlayContainer) {
-    hideLoginOverlay();
-  }
-});
+// const overlayContainer = document.getElementById("overlayContainer");
+// overlayContainer.addEventListener("click", (event) => {
+//   if (event.target === overlayContainer) {
+//     hideLoginOverlay();
+//   }
+// });
 
 // Event listener to handle form submission
-const loginForm = document.getElementById("loginForm");
-loginForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+// const loginForm = document.getElementById("loginForm");
+// loginForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  // Perform any necessary actions here, such as sending login data to the server
+//   // Perform any necessary actions here, such as sending login data to the server
 
-  // Hide the overlay after form submission (optional)
-  hideLoginOverlay();
-});
+//   // Hide the overlay after form submission (optional)
+//   hideLoginOverlay();
+// });
+
+$(".cancelBtn").on("click", () => {
+  hideLoginOverlay()
+   const homePage = document.querySelector(".home");
+   homePage.style.backgroundColor = "rgb(0, 0, 0)";
+})
