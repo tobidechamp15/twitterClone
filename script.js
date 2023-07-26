@@ -66,7 +66,6 @@ $("#flip").on("click", () => {
       console.log("End Height: " + $section.height());
     },
   });
-  // $sectionHeight = $("panel").height();
 
   console.log($section.height());
 
@@ -211,7 +210,6 @@ fileButton.addEventListener("click", function () {
         const imageElement = document.createElement("img");
         imageElement.src = imageUrl;
         imageElement.classList.add("twtImg");
-        // imageElement.style.width = "100%";
 
         // Append the selected image to the section
         fileSection.appendChild(imageElement);
@@ -281,16 +279,12 @@ tweetButton.addEventListener("click", () => {
 
   postSection.appendChild(anotherImage);
 
-  // postImage.src = imageUrl;
-
   const singlePost = document.createElement("div");
   singlePost.appendChild(userImg);
   singlePost.appendChild(postSection);
   singlePost.classList.add("singlePost");
 
   tweetsPosted.appendChild(singlePost);
-
-  // fileSection.removeChild(imageElement);
 
   console.log(tweetText);
   console.log(tweetImage);
@@ -306,8 +300,6 @@ likeBtn.addEventListener("click", () => {
   if ((likeBtn.src = "currentSrc")) {
     var newSrc = "assets/mob-ass/liked-btn.png";
     likeBtn.setAttribute("src", newSrc);
-
-    // console.log(likeBtn.src");
   } else if ((likeBtn.src = "newSrc")) {
     var currentSrc = "assets/mob-ass/like-btn.png";
     likeBtn.setAttribute("src", currentSrc);
@@ -346,27 +338,8 @@ function hideLoginOverlay() {
 const showLoginButton = document.getElementById("showLoginButton");
 showLoginButton.addEventListener("click", showLoginOverlay);
 
-// Event listener to hide the overlay when clicking outside the login form
-// const overlayContainer = document.getElementById("overlayContainer");
-// overlayContainer.addEventListener("click", (event) => {
-//   if (event.target === overlayContainer) {
-//     hideLoginOverlay();
-//   }
-// });
-
-// Event listener to handle form submission
-// const loginForm = document.getElementById("loginForm");
-// loginForm.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   // Perform any necessary actions here, such as sending login data to the server
-
-//   // Hide the overlay after form submission (optional)
-//   hideLoginOverlay();
-// });
-
 $(".cancelBtn").on("click", () => {
-  hideLoginOverlay()
-   const homePage = document.querySelector(".home");
-   homePage.style.backgroundColor = "rgb(0, 0, 0)";
-})
+  hideLoginOverlay();
+  const homePage = document.querySelector(".home");
+  homePage.style.backgroundColor = "rgb(0, 0, 0)";
+});
