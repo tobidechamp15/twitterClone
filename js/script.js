@@ -20,8 +20,6 @@ cancel.addEventListener("click", function () {
   homePage.style.backgroundColor = "black";
 });
 
-$;
-
 const screens = document.querySelector(".screen");
 screens.addEventListener("click", function () {
   var sidebar = document.getElementById("sidebar");
@@ -68,7 +66,6 @@ $("#flip").on("click", () => {
       console.log("End Height: " + $section.height());
     },
   });
-  // $sectionHeight = $("panel").height();
 
   console.log($section.height());
 
@@ -213,7 +210,6 @@ fileButton.addEventListener("click", function () {
         const imageElement = document.createElement("img");
         imageElement.src = imageUrl;
         imageElement.classList.add("twtImg");
-        // imageElement.style.width = "100%";
 
         // Append the selected image to the section
         fileSection.appendChild(imageElement);
@@ -283,16 +279,12 @@ tweetButton.addEventListener("click", () => {
 
   postSection.appendChild(anotherImage);
 
-  // postImage.src = imageUrl;
-
   const singlePost = document.createElement("div");
   singlePost.appendChild(userImg);
   singlePost.appendChild(postSection);
   singlePost.classList.add("singlePost");
 
   tweetsPosted.appendChild(singlePost);
-
-  // fileSection.removeChild(imageElement);
 
   console.log(tweetText);
   console.log(tweetImage);
@@ -305,17 +297,14 @@ likeBtn.addEventListener("click", () => {
   var newSrc = "assets/mob-ass/liked-btn.png";
   console.log(currentSrc);
 
-  if (likeBtn.src = "currentSrc") {
+  if ((likeBtn.src = "currentSrc")) {
     var newSrc = "assets/mob-ass/liked-btn.png";
     likeBtn.setAttribute("src", newSrc);
-
-    // console.log(likeBtn.src");
-  } else if (likeBtn.src = "newSrc") {
+  } else if ((likeBtn.src = "newSrc")) {
     var currentSrc = "assets/mob-ass/like-btn.png";
     likeBtn.setAttribute("src", currentSrc);
   }
 });
-
 
 $("#createStd").on("click", () => {
   $("#anal").toggleClass("hide dropDownSec");
@@ -328,4 +317,29 @@ $("#createProf").on("click", () => {
 $("#createSett").on("click", () => {
   $("#anal3").toggleClass("hide  ");
   $("#stdArrow3").toggleClass("rotate-arrow");
+});
+
+// Function to show the login overlay
+function showLoginOverlay() {
+  const overlayContainer = document.getElementById("overlayContainer");
+  overlayContainer.style.display = "flex";
+  var sidebar = document.getElementById("sidebar");
+  sidebar.classList.remove("active");
+}
+console.log(5 + 9);
+
+// Function to hide the login overlay
+function hideLoginOverlay() {
+  const overlayContainer = document.getElementById("overlayContainer");
+  overlayContainer.style.display = "none";
+}
+
+// Event listener to show the overlay when the button is clicked
+const showLoginButton = document.getElementById("showLoginButton");
+showLoginButton.addEventListener("click", showLoginOverlay);
+
+$(".cancelBtn").on("click", () => {
+  hideLoginOverlay();
+  const homePage = document.querySelector(".home");
+  homePage.style.backgroundColor = "rgb(0, 0, 0)";
 });
