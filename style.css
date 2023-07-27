@@ -703,4 +703,7 @@ html input[disabled] {
     justify-content: start;
     gap: 10px;
   }
+  .des-ver{
+    width: 50%;
+  }
 }
