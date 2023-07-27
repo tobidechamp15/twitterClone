@@ -1,0 +1,10 @@
+*{
+    color: #fff;
+    box-sizing: border-box;
+  font-family: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+body{
+    background-color: #000 !important;
+}
