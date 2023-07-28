@@ -1,10 +1,136 @@
-*{
-    color: #fff;
-    box-sizing: border-box;
+* {
+  color: #fff;
+  box-sizing: border-box;
   font-family: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
 }
 
-body{
-    background-color: #000 !important;
+body {
+  background-color: #000 !important;
+}
+.logAllOut {
+  padding: 16px;
+  color: #f4212e;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+.signInCancel {
+  width: 12px;
+  height: 12px;
+}
+.signIn {
+  font-weight: 500;
+  font-family: Roboto !important;
+  font-size: 12px;
+  color: #3c4043;
+}
+.signInImg {
+  width: 20px;
+  height: 20px;
+}
+.signInUsername {
+  letter-spacing: 0.25px;
+  color: #5f6368;
+  font-size: 11px;
+  font-weight: 400;
+  fill: #5f6368;
+  font-family: Roboto;
+}
+.signInTwitter {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #e7e9ea;
+  font-family: "Twitter Chirp", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+.gmailIcon {
+  width: 18px;
+  height: 18px;
+}
+.signedIn {
+  padding: 1px 12px;
+  height: 38px;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+.appleSignIn {
+  font-weight: 700;
+  background-color: #ffff;
+  padding: 16px;
+  height: 40px;
+  display: flex;
+  border-radius: 25px;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+.appleSignIn span {
+  color: #0f1419;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+}
+.appleSignIn img {
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+}
+.or {
+  font-size: 17px;
+  display: inline;
+  font-weight: 400;
+  line-height: 20px;
+  color: #e7e9ea;
+}
+.oror {
+  gap: 10px;
+}
+.signInput {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #5f6368;
+  outline-style: none;
+  unicode-bidi: isolate;
+  writing-mode: horizontal-tb !important;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  line-height: 24px;
+  font-size: 17px;
+  font-weight: 400;
+  word-wrap: break-word;
+  border-radius: 4px;
+  pointer-events: auto;
+  padding: 12px 8px 8px 8px;
+  height: 56px;
+}
+input:focus-visible {
+  border-color: #007bff; /* Change the border color when the input is in focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4); /* Add a box shadow when the input is in focus */
+  outline: none;
+}
+.nextSignIn {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+  margin-top: 24px;
+  border-radius: 20px;
+  color: #0f1419;
+  background-color: #e7e9ea;
+  height: 34px;
+  text-align: center;
+}
+.nextSignForgot {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+  margin-top: 34px;
+  border-radius: 20px;
+  color: #e7e9ea;
+  background-color: #0f141900;
+  border: 1px #5f6368 solid;
+  height: 34px;
+  text-align: center;
 }
