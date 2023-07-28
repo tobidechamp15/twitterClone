@@ -521,6 +521,29 @@ html input[disabled] {
   border: 2px solid #fff;
   padding: 5px;
 }
+.adsFullName{
+  font-size: 15px;
+}
+.adsUsername{
+  font-size: 15px;
+  color: #71767b;
+  font-weight: 400;
+}
+.adsAnotherAccount{
+  color: #1d9bf0;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 16px;
+  font-weight: 400;
+
+}
+.adsLearn{
+  color: #71767b;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+
+}
 @media screen and (min-width: 566px) {
   .home {
     height: max-content;
