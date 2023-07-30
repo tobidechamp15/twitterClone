@@ -1,64 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crete Round|Roboto|TwitterChirp|Inter"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="icon" href="assets/favIcon/Logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="bootstrap-4.5.0/dist/css/bootstrap.css" />
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Twitter|Home</title>
-</head>
-
-<body>
-    <div class="container-fluid bg-dark home">
-        <nav class="d-flex d-sm-none justify-content-between align-items-center pt-3">
-            <span class="img-bg"><img src="assets/mob-ass/user-img.png" alt="" class="user-img" /></span>
-            <span><img src="assets/mob-ass/Logo.svg" class="bird" alt="" /></span>
-            <span></span>
-        </nav>
-
-        <div id="sidebar" class="bg-danger">
-            <span><img src="assets/mob-ass/Icon.svg" class="cancel" alt="" /></span>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
-        </div>
-<!-- For you and Following (Bootstrap) -->
-        <ul class="nav nav-pills">
-            <li class="active hovering">
-                <a href="#1a"   data-toggle="tab">Overview</a>
-            </li>
-            <li><a href="#2a" data-toggle="tab">Using nav-pills</a>
-            </li>
+    <title>Home/Twitter(2)</title>
+  </head>
+  <body class="d-sm-flex">
+    <div class="d-none d-sm-block side-bar"></div>
+    <div class="container-fluid home pt-5 ms-0 me-0">
+      <section class="d-none d-sm-flex justify-content-between side-list">
+        <ul class="d-none d-sm-flex flex-column side-lists">
+          <li class="des-side-img-cont">
+            <img
+              src="assets/des-ass/home.png"
+              data-name="Home"
+              class="des-side-img"
+              alt="" />
+            <span class="list-lg">Home</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img
+              src="assets/des-ass/search.png"
+              data-name="Search"
+              class="des-side-img"
+              alt="" />
+            <span class="list-lg">Explore</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img
+              src="assets/des-ass/Notification.svg"
+              data-name="Notification"
+              class="des-side-img"
+              alt="" />
+            <span class="list-lg">Notifications</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img src="assets/des-ass/Message.svg" class="des-side-img" alt="" />
+            <span class="list-lg">Messages</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img src="assets/des-ass/List.svg" class="des-side-img" alt="" />
+            <span class="list-lg">List</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img
+              src="assets/des-ass/Bookmark.svg"
+              class="des-side-img"
+              alt="" />
+            <span class="list-lg">Bookmark</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img src="assets/des-ass/More.svg" class="des-side-img" alt="" />
+            <span class="list-lg">More</span>
+          </li>
+          <li class="des-side-img-cont">
+            <img src="assets/des-ass/Profile.svg" class="des-side-img" alt="" />
+            <span class="list-lg">Profile</span>
+          </li>
         </ul>
+      </section>
+      <div class="des-content">
+        <section class="d-flex flex-column gap-3 top-section" id="mySection">
+          <span class="d-none d-sm-block home-title">Home</span>
+          <nav
+            class="d-flex d-sm-none justify-content-between align-items-center pt-3 nava"
+            style="transition: 0.5s">
+            <span class="img-bg cursor-pointer">
+              <img
+                src="assets/mob-ass/user-img.png"
+                alt=""
+                class="user-img cursor-pointer" />
+            </span>
+            <span>
+              <img src="assets/mob-ass/Logo.svg" class="bird" alt="" />
+            </span>
+            <span
+              ><img
+                src="assets/des-ass/Feature stroke icon.svg"
+                class="user-img"
+            /></span>
+          </nav>
+          <div id="sidebar" class="p-3">
+            <section
+              class="side-top d-flex align-items-center justify-content-around">
+              <span class="acc-info">Account Information</span>
+              <span class="d-flex justify-content-end">
+                <img src="assets/mob-ass/Icon.svg" class="cancel" alt="" />
+              </span>
+            </section>
+            <section
+              class="d-flex justify-content-between p-2 align-items-center">
+              <span class="profile-bg cursor-pointer">
+                <img
+                  src="assets/mob-ass/user-img.png"
+                  alt=""
+                  class="profile-img cursor-pointer" />
+              </span>
+              <span class="addaccount-cont"
+                ><a href="addAccount.html"
+                  ><img
+                    src="assets/mob-ass/user-add-white.png"
+                    class="add-account"
+                    alt="" /></a
+              ></span>
+            </section>
+            <section class="d-flex profileName align-itms-center flex-column">
+              <span class="fname">Firstname Surname</span>
+              <span class="profile-userName">@username</span>
+            </section>
+            <section
+              class="d-flex align-items-center gap-2 mt-3 profile-follow">
+              <span class="text-light d-flex align-items-center"
+                >113 <span class="people">Following</span></span
+              >
+              <span class="text-light"
+                >23 <span class="people">Followers</span></span
+              >
+            </section>
+            <div class="d-flex flex-column gap-5 mt-5">
+              <section class="nav-sections">
+                <img src="assets/des-ass/Profile.svg" class="nav-imgs" /><span
+                  class="nav-items"
+                  >Profile</span
+                >
+              </section>
+              <section class="nav-sections">
+                <img
+                  src="assets/des-ass/twitter-blue.png"
+                  class="nav-imgs" /><span class="nav-items">Twitter Blue</span>
+              </section>
+              <section class="nav-sections">
+                <img src="assets/des-ass/List.svg" class="nav-imgs" /><span
+                  class="nav-items"
+                  >Lists</span
+                >
+              </section>
+              <section class="nav-sections">
+                <img src="assets/des-ass/Bookmark.svg" class="nav-imgs" /><span
+                  class="nav-items"
+                  >Bookmark</span
+                >
+              </section>
+              <section class="nav-sections">
+                <img
+                  src="assets/des-ass/communities.png"
+                  class="nav-imgs" /><span class="nav-items">Communities</span>
+              </section>
+              <section class="nav-sections">
+                <img
+                  src="assets/des-ass/monetization.png"
+                  class="nav-imgs" /><span class="nav-items">Monetization</span>
+              </section>
+            </div>
+            <div class="lineDis"></div>
 
+            <section class="d-flex flex-column p-3">
+              <!-- Example single danger button -->
+              <div
+                class="d-flex justify-content-between align-items-center"
+                id="createStd">
+                <span class="drop-menu">Creative Studio</span>
+                <img
+                  src="assets/des-ass/drop-down-arrow.png"
+                  class="arrows"
+                  id="stdArrow"
+                  alt="" />
+              </div>
+              <div class="w-100 gap-3 p-3 hide" id="anal">
+                <img
+                  src="assets/des-ass/analytics.png"
+                  class="nav-drop-imgs"
+                  alt="" />
+                <span class="dropDownItems">Analytics</span>
+              </div>
+              <div
+                class="d-flex mt-3 justify-content-between align-items-center"
+                id="createProf">
+                <span class="drop-menu">Professional Tools</span>
+                <img
+                  src="assets/des-ass/drop-down-arrow.png"
+                  class="arrows"
+                  id="stdArrow2"
+                  alt="" />
+              </div>
+              <div class="w-100 gap-3 p-3 hide" id="anal2">
+                <section class="d-flex gap-3 mt-2">
+                  <img
+                    src="assets/des-ass/rocket.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Twitter for Professionals</span>
+                </section>
+                <section class="d-flex gap-3 mt-5">
+                  <img
+                    src="assets/des-ass/arrow-up-right.png"
+                    class="ads-img"
+                    alt="" />
+                  <span class="dropDownItems">Twitter Ads</span>
+                </section>
+              </div>
+              <div
+                class="d-flex mt-3 justify-content-between align-items-center"
+                id="createSett">
+                <span class="drop-menu">Settings</span>
+                <img
+                  src="assets/des-ass/drop-down-arrow.png"
+                  class="arrows"
+                  id="stdArrow3"
+                  alt="" />
+              </div>
+              <div class="w-100 gap-3 p-3 hide" id="anal3">
+                <section class="d-flex gap-3">
+                  <img
+                    src="assets/des-ass/setting.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Settings and Privacy</span>
+                </section>
+                <section class="d-flex gap-3 mt-5">
+                  <img
+                    src="assets/des-ass/help.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Help center</span>
+                </section>
+                 <section class="d-flex gap-3 mt-3">
+                  <img
+                    src="assets/des-ass/dataSaver.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Data Saver</span>
+                </section>
+                 <section class="d-flex gap-3 mt-3">
+                  <img
+                    src="assets/des-ass/display.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Display</span>
+                </section>
+                 <section class="d-flex gap-3 mt-3">
+                  <img
+                    src="assets/des-ass/arrow-up-right.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Keyboard Shortcuts</span>
+                </section>
+                 <section class="d-flex gap-3 mt-3">
+                  <img
+                    src="assets/des-ass/logOut.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems" id="showLoginButton"
+                    >Log out</span
+                  >
+                </section>
+                 <section class="d-flex gap-3 mt-3">
+                  <img
+                    src="assets/des-ass/arrow-up-right.png"
+                    class="nav-drop-imgs"
+                    alt="" />
+                  <span class="dropDownItems">Twitter Ads</span>
+                </section>
+              </div>
+            </section>
+          </div>
+          <!-- Button to show the login overlay -->
+          <!-- <button id="showLoginButton">Login</button> -->
+
+          <!-- Overlay Container -->
+          <div class="overlay-container d-sm-none" id="overlayContainer">
+            <div class="login-overlay d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="assets/des-ass/X.png" class="twitX" alt="" />
+              </div>
+              <span class="d-flex align-self-start logOutQuestion"
+                >Log out of Twitter?</span
+              >
+              <span class="logOutDes"
+                >You can always log back in at any time. If you just want to
+                switch accounts, you can do that by adding an existing
+                account.</span
+              >
+              <div class="d-flex flex-column logOut-cancel">
+                <span class="logOutBtn"> Log out </span>
+                <span class="cancelBtn"> Cancel </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- For you and Following (Bootstrap) -->
+          <ul
+            class="nav nav-pills d-flex justify-content-center align-items-center w-100 pills">
+            <li
+              class="active hovering pt3 d-flex justify-content-center align-items-center w-50">
+              <a
+                style="text-align: center; font-size: 15px"
+                href="#1a"
+                class="tabSwitch"
+                data-toggle="tab"
+                >For you</a
+              >
+            </li>
+            <li
+              class="pt-3 p3 d-flex justify-content-center align-items-center w-50">
+              <a
+                style="text-align: center"
+                class="tabSwitch"
+                href="#2a"
+                data-toggle="tab"
+                >Following</a
+              >
+            </li>
+          </ul>
+        </section>
         <div class="tab-content clearfix">
-            <div class="tab-pane active" id="1a">
-                <h3 class="text-light">Content's background color is the same for the tab</h3>
-            </div>
-            <div class="tab-pane" id="2a">
-                <h3 class="text-danger">We use the class nav-pills instead of nav-tabs which automatically creates a
-                    background color for the tab</h3>
-            </div>
+          <div class="tab-pane screen active text-lights" id="1a">
+            <!-- Working on here  -->
+            <section class="d-flex d-sm-flex justify-content-start">
+              <img
+                src="assets/mob-ass/white-user.png"
+                class="img-des-tweet"
+                alt="" />
+              <div class="w-100 pt-2 d-flex flex-column tweet-screen">
+                <textarea
+                  name="tweet-comment"
+                  id="tweet-comment"
+                  placeholder="What is happening?"></textarea>
+                <section id="fileSection"></section>
+                <section
+                  class="d-flex align-items-center justify-content-between mb-3 mt-2">
+                  <section class="d-flex gap-4">
+                    <img
+                      src="assets/mob-ass/microphone.png"
+                      alt="Click me to access the microphone"
+                      id="microphoneImage" />
+                    <img
+                      src="assets/mob-ass/picturadd-e.png"
+                      alt="Click me"
+                      id="fileButton" />
+                    <img src="assets/mob-ass/gif-square.png" alt="" />
+                    <img src="assets/mob-ass/list-bullet.png" alt="" />
+                    <img src="assets/mob-ass/marker-location.png" alt="" />
+                  </section>
+                  <button
+                    disabled="disabled"
+                    id="tweet-btn"
+                    class="d-flex tweet-btn me-2">
+                    Tweet
+                  </button>
+                </section>
 
+                <div class="text-warning fw-bolder fs-5 bg-primary" id="">
+                  <section>
+                    <span> </span>
+                    <section id="destinationContainer">
+                      <span> </span>
+                    </section>
+                  </section>
+                </div>
+              </div>
+            </section>
+            <section class="tweetsPosted d-flex flex-column gap-5"></section>
+
+            <section class="d-flex flex-column w-100">
+              <div class="d-flex w-100 gap-2 singlePost pb-0 mb-2">
+                <img src="assets/des-ass/chelDogg.jpg" class="imgProfile" />
+                <div class="d-flex flex-column align-items-center w-100">
+                  <section class="d-flex tweetTop w-100">
+                    <section userDetails>
+                      <span class="username">Chelsea Dodgers</span>
+                      <span class="accName">@TheBlueDodger.17h </span>
+                    </section>
+                    <img src="assets/des-ass/tweetMenu.png" alt="" />
+                  </section>
+                  <span class="username w-100 mt-3">
+                    Mykhalio Mudryk on his potential, playing for Chelsea, and
+                    working with Mauricio Pochettino: <br /><br />"I feel good
+                    because playing under Poch, our manager, is nice and
+                    enjoyable"
+                  </span>
+                  <img
+                    src="assets/des-ass/mudryk.jfif"
+                    class="tweetImages"
+                    alt="" />
+                  <section
+                    class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/comment-alt-middle.png"
+                      alt="" />34
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/retweet.png"
+                      alt="" />247
+                    <img
+                      class="postAtt"
+                      id="like-btn"
+                      src="assets/mob-ass/like-btn.png"
+                      alt="" />5,367
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/tweet-analytics.png"
+                      alt="" />267.3K
+                  </section>
+                </div>
+              </div>
+              <div class="d-flex w-100 gap-2 singlePost pb-0 mb-2 mt-5">
+                <img src="assets/des-ass/modCv.jpg" class="imgProfile" />
+                <div class="d-flex flex-column align-items-center w-100">
+                  <section class="d-flex tweetTop w-100">
+                    <section userDetails>
+                      <span class="username">Mod</span>
+                      <span class="accName">@CFCMod.2days ago </span>
+                    </section>
+                    <img src="assets/des-ass/tweetMenu.png" alt="" />
+                  </section>
+                  <span class="username w-100 mt-3">
+                    New kit added to the collection
+                  </span>
+                  <img
+                    src="assets/des-ass/mod.jfif"
+                    class="tweetImages"
+                    alt="" />
+                  <section
+                    class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/comment-alt-middle.png"
+                      alt="" />35M
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/retweet.png"
+                      alt="" />27
+                    <img
+                      class="postAtt"
+                      id="like-btn"
+                      src="assets/mob-ass/like-btn.png"
+                      alt="" />567
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/tweet-analytics.png"
+                      alt="" />267.3M
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="tab-pane scren text-lights" id="2a">
+            <section class="d-flex mt-4 flex-column w-100">
+              <div class="d-flex w-100 gap-2 singlePost pb-0 mb-2">
+                <img src="assets/des-ass/chelDogg.jpg" class="imgProfile" />
+                <div class="d-flex flex-column align-items-center w-100">
+                  <section class="d-flex tweetTop w-100">
+                    <section userDetails>
+                      <span class="username">Chelsea Dodgers</span>
+                      <span class="accName">@TheBlueDodger.17h </span>
+                    </section>
+                    <img src="assets/des-ass/tweetMenu.png" alt="" />
+                  </section>
+                  <span class="username w-100 mt-3">
+                    Mykhalio Mudryk on his potential, playing for Chelsea, and
+                    working with Mauricio Pochettino: <br /><br />"I feel good
+                    because playing under Poch, our manager, is nice and
+                    enjoyable"
+                  </span>
+                  <img
+                    src="assets/des-ass/mudryk.jfif"
+                    class="tweetImages"
+                    alt="" />
+                  <section
+                    class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/comment-alt-middle.png"
+                      alt="" />34
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/retweet.png"
+                      alt="" />247
+                    <img
+                      class="postAtt"
+                      id="like-btn"
+                      src="assets/mob-ass/like-btn.png"
+                      alt="" />5,367
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/tweet-analytics.png"
+                      alt="" />267.3K
+                  </section>
+                </div>
+              </div>
+              <div class="d-flex w-100 gap-2 singlePost pb-0 mb-2 mt-5">
+                <img src="assets/des-ass/modCv.jpg" class="imgProfile" />
+                <div class="d-flex flex-column align-items-center w-100">
+                  <section class="d-flex tweetTop w-100">
+                    <section userDetails>
+                      <span class="username">Mod</span>
+                      <span class="accName">@CFCMod.2days ago </span>
+                    </section>
+                    <img src="assets/des-ass/tweetMenu.png" alt="" />
+                  </section>
+                  <span class="username w-100 mt-3">
+                    New kit added to the collection
+                  </span>
+                  <img
+                    src="assets/des-ass/mod.jfif"
+                    class="tweetImages"
+                    alt="" />
+                  <section
+                    class="d-flex justify-content-between align-items-center bottomPost gap-3 w">
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/comment-alt-middle.png"
+                      alt="" />35M
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/retweet.png"
+                      alt="" />27
+                    <img
+                      class="postAtt"
+                      id="like-btn"
+                      src="assets/mob-ass/like-btn.png"
+                      alt="" />567
+                    <img
+                      class="postAtt"
+                      src="assets/des-ass/tweet-analytics.png"
+                      alt="" />267.3M
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
-
+      </div>
+      <section class="des-content-right flex-column gap-3">
+        <section class="w-100">
+          <input
+            type="search"
+            placeholder="Search Twitter"
+            class="des-search" />
+        </section>
+        <section class="w-100 d-flex flex-column gap-2 getVerSec">
+          <span class="get-ver">Get Verified</span>
+          <span class="desVer">Subscribe to unlock new features.</span>
+          <span class="get-verBtn">Get Verified</span>
+        </section>
+        <section class="w-100 d-flex flex-column gap-2 getVerSec">
+          <span class="get-ver">Listen live in spaces</span>
+          <section>
+            <div class="d-flex justify-content-between">
+              <span class="desVer">Chelsea vs Brighton watchalong</span>
+              <section class="spaces-acc">
+                <img
+                  src="assets/des-ass/BLOG_Twitter-Spaces.png"
+                  class="spaces"
+                  alt="" />
+                <span class="desVer">+333</span>
+              </section>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+              <span class="desVer">All the rumours we heard </span>
+              <section class="spaces-acc">
+                <img
+                  src="assets/des-ass/BLOG_Twitter-Spaces.png"
+                  class="spaces ms-1"
+                  alt="" />
+                <span class="desVer">+333</span>
+              </section>
+            </div>
+          </section>
+        </section>
+        <section class="w-100 d-flex flex-column gap-2 gap-5 getVerSec">
+          <span class="get-ver mb-4">Trends for you</span>
+          <section class="d-flex flex-column gap-1">
+            <div class="trends-top d-flex justify-content-between">
+              <span class="trendAspect">Sports . Trending</span>
+              <span class="menu"></span>
+            </div>
+            <span class="trendName">Slonina</span>
+            <span class="tweetsNum">9,677k Tweets</span>
+          </section>
+          <section class="d-flex flex-column gap-1">
+            <div class="trends-top d-flex justify-content-between">
+              <span class="trendAspect">Sports . Trending</span>
+              <span class="menu"></span>
+            </div>
+            <span class="trendName">Uriel</span>
+            <span class="tweetsNum">9,677k Tweets</span>
+          </section>
+          <section class="d-flex flex-column gap-1">
+            <div class="trends-top d-flex justify-content-between">
+              <span class="trendAspect">Sports . Trending</span>
+              <span class="menu"></span>
+            </div>
+            <span class="trendName">#SamsungUnpackedNG</span>
+            <span class="tweetsNum">5.9M Tweets</span>
+          </section>
+          <section class="d-flex flex-column gap-1">
+            <div class="trends-top d-flex justify-content-between">
+              <span class="trendAspect">Sports . Trending</span>
+              <span class="menu"></span>
+            </div>
+            <span class="trendName">Strasbourg</span>
+            <span class="tweetsNum">78M Tweets</span>
+          </section>
+          <section class="d-flex flex-column gap-1">
+            <div class="trends-top d-flex justify-content-between">
+              <span class="trendAspect">Sports . Trending</span>
+              <span class="menu"></span>
+            </div>
+            <span class="trendName">CGPA</span>
+            <span class="tweetsNum">67M Tweets</span>
+          </section>
+          <section class="d-flex flex-column gap-1">
+            <div class="trends-top d-flex justify-content-between">
+              <span class="trendAspect">Sports . Trending</span>
+              <span class="menu"></span>
+            </div>
+            <span class="trendName">Congratulations Mayor</span>
+            <span class="tweetsNum">9,6M Tweets</span>
+          </section>
+        </section>
+      </section>
+      <section class="bottom-bar gap-5 d-flex flex-column d-sm-none w-100">
+        <div class="d-flex justify-content-between pe-3 w-100">
+          <span></span>
+          <span
+            ><img
+              src="assets/des-ass/tweet.svg"
+              id="flip"
+              class="user-i tweet me-2"
+              alt=""
+          /></span>
+        </div>
+        <section class="p-2 bottom-bar-cont d-flex justify-content-around">
+          <span
+            ><img src="assets/mob-ass/home.png" class="bottom-img" alt=""
+          /></span>
+          <span
+            ><img src="assets/des-ass/Search.svg" class="bottom-img" alt=""
+          /></span>
+          <span
+            ><img
+              src="assets/des-ass/Notification.svg"
+              class="bottom-img"
+              alt=""
+          /></span>
+          <span
+            ><img src="assets/des-ass/Message.svg" class="bottom-img" alt=""
+          /></span>
+        </section>
+      </section>
     </div>
-
-
-    </div>
-
+    <section class="d-sm-none tweet-page flex-column" id="panel">
+      <section class="tweet-top d-flex justify-content-between">
+        <section id="tweet-cancel" class="text-light">
+          <img class="cancel-btn" src="assets/mob-ass/left-arrow.png" alt="" />
+        </section>
+        <div class="tweet-topRight text-light">
+          <button
+            disabled="disabled"
+            id="mobTweet-btn"
+            class="d-flex tweet-btn me-2">
+            Tweet
+          </button>
+        </div>
+      </section>
+      <section class="d-flex gap-2">
+        <span class="tweet-user-bg"
+          ><img src="assets/mob-ass/user-img.png" class="tweet-user" alt=""
+        /></span>
+        <div class="d-flex flex-column ps-5 w-100">
+          <section
+            class="d-flex gap-1 align-items-center justify-content-center select-drop">
+            <span class="tweet-type-text" id="selectedValue">Everyone</span>
+            <img
+              src="assets/des-ass/drop-down-arrow.png"
+              class="drop-down"
+              alt="" />
+          </section>
+          <textarea
+            name="comment-box"
+            id="comment"
+            class="comment-input"
+            placeholder="What is happening?!"></textarea>
+        </div>
+      </section>
+      <section class="tweet-type">
+        <span class="text-center'">Choose audience</span>
+        <div class="d-flex flex-column">
+          <section class="d-flex flex-column gap-2">
+            <div class="d-flex flex-column w-100">
+              <section class="d-flex justify-content-between w-100 list1-cont">
+                <label id="label1" class="w-100 text-start list1" for="option1"
+                  >Everyone</label
+                >
+                <input
+                  type="radio"
+                  id="option1"
+                  name="myRadio"
+                  value="Everyone"
+                  checked />
+              </section>
+              <section class="d-flex justify-content-between w-100 list1-cont">
+                <label
+                  id="label2"
+                  class="w-100 text-start list1"
+                  for="TwitterCircle"
+                  >Twitter Circle</label
+                >
+                <input
+                  type="radio"
+                  name="myRadio"
+                  id="TwitterCircle"
+                  value="Twitter Circle" />
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</body>
-
+    <script src="js/tweet.js"></script>
+  </body>
 </html>
