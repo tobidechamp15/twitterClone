@@ -1,6 +1,24 @@
+// const { update } = require("immutable");
+window.addEventListener("load", () => {
+  loadTweets();
+});
 var imageUrl;
 
+const posts = document.querySelector("body");
 const anotherImage = document.createElement("img");
+const menu = document.querySelector(".user-img");
+const cancel = document.querySelector(".cancel");
+const screens = document.querySelector(".screen");
+const screns = document.querySelector(".scren");
+const bird = document.querySelector(".bird");
+
+const storedTweets = localStorage.getItem("twitterTweets");
+let twitterTweets = storedTweets ? JSON.parse(storedTweets) : [];
+
+function updateLocalStorage() {
+  localStorage.setItem("twitterTweets", JSON.stringify(twitterTweets));
+}
+
 anotherImage.classList.add("postImg");
 
 function toggleSidebar() {
@@ -9,10 +27,8 @@ function toggleSidebar() {
   const homePage = document.querySelector(".home");
   homePage.style.backgroundColor = "rgb(63, 61, 61)";
 }
-const menu = document.querySelector(".user-img");
 menu.addEventListener("click", toggleSidebar);
 
-const cancel = document.querySelector(".cancel");
 cancel.addEventListener("click", function () {
   var sidebar = document.getElementById("sidebar");
   sidebar.classList.remove("active");
@@ -20,20 +36,17 @@ cancel.addEventListener("click", function () {
   homePage.style.backgroundColor = "black";
 });
 
-const screens = document.querySelector(".screen");
 screens.addEventListener("click", function () {
   var sidebar = document.getElementById("sidebar");
   sidebar.classList.remove("active");
   const homePage = document.querySelector(".home");
   homePage.style.backgroundColor = "black";
 });
-const screns = document.querySelector(".scren");
 screns.addEventListener("click", function () {
   var sidebar = document.getElementById("sidebar");
   sidebar.classList.remove("active");
 });
 
-const bird = document.querySelector(".bird");
 bird.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
@@ -41,7 +54,6 @@ bird.addEventListener("click", () => {
   });
 });
 
-const posts = document.querySelector("body");
 posts.addEventListener("keypress", (e) => {});
 
 // jquery for beginner
@@ -286,6 +298,8 @@ tweetButton.addEventListener("click", () => {
 
   tweetsPosted.appendChild(singlePost);
 
+  twitterTweets.push(singlePost);
+  updateLocalStorage();
   console.log(tweetText);
   console.log(tweetImage);
 });
@@ -343,3 +357,57 @@ $(".cancelBtn").on("click", () => {
   const homePage = document.querySelector(".home");
   homePage.style.backgroundColor = "rgb(0, 0, 0)";
 });
+
+function loadTweets() {
+  twitterTweets.forEach((singlePost) => {
+    const tweetText = document.getElementById("tweet-comment").value;
+    const tweetImage = imageElement;
+    const tweetsPosted = document.querySelector(".tweetsPosted");
+
+    const userImg = document.createElement("img");
+    userImg.src = "assets/mob-ass/white-user.png";
+    userImg.classList.add("img-des-tweet");
+
+    const postSection = document.createElement("div");
+    postSection.classList.add("postSection");
+
+    const postSectionTop = document.createElement("div");
+    postSectionTop.classList.add("postSectionTop");
+
+    const userName = document.createElement("span");
+    userName.textContent = "Firstname Surname";
+    userName.classList.add("userName");
+
+    postSectionTop.appendChild(userName);
+
+    const postSectionMenu = document.createElement("img");
+    postSectionMenu.src = "assets/des-ass/tweetMenu.png";
+    postSectionMenu.classList.add("postSectionMenu");
+
+    postSectionTop.appendChild(postSectionMenu);
+    console.log(postSectionTop);
+
+    postSection.appendChild(postSectionTop);
+
+    const tweetDescription = document.createElement("span");
+    tweetDescription.appendChild(document.createTextNode(tweetText));
+    tweetDescription.classList.add("tweet-text");
+    console.log(tweetDescription);
+
+    postSection.appendChild(tweetDescription);
+
+    postSection.appendChild(anotherImage);
+
+    // // const singlePost = document.createElement("div");
+    // singlePost.appendChild(userImg);
+    // singlePost.appendChild(postSection);
+    // singlePost.classList.add("singlePost");
+
+    // tweetsPosted.appendChild(singlePost);
+
+    twitterTweets.push(singlePost);
+    updateLocalStorage();
+    console.log(tweetText);
+    console.log(tweetImage);
+  });
+}
